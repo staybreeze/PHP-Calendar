@@ -6,6 +6,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@100;600;800&display=swap');
+
+        h3 {
+            font-family: 'Big Shoulders Inline Text', cursive;
+            font-size: 95px;
+            color: rgba(125, 92, 223);
+        }
+
         * {
             margin: 0;
             box-sizing: border-box;
@@ -15,51 +23,109 @@
         body {
             width: 100vw;
             margin: auto;
+            background-color: rgba(232, 232, 232, 0.576);
         }
 
         .nav,
-        .aside,
+        .aside-1,.aside-2,
         .main,
         .footer {
-            border: 1px solid black;
+            border: 5px solid white;
         }
 
         .nav {
-            width: 80vw;
-            height: 15vh;
+            width: 100vw;
+            height: 12vh;
         }
 
         .container {
             display: flex;
             flex-wrap: wrap;
             margin: auto;
-            background-color:beige;
+            /* background-color:beige;   */
         }
 
-        .aside {
-            width: 28%;
-            height: 70vh;
+        .aside-1 {
+            width: 670px;
+            height: 775px;
+            border-right: 0;
+
         }
+
+
 
         .main {
-            width: calc(100% - 28%);
-            height: 70vh;
-
+            width: calc(100% - 670px);
+            height: 775px;
+border-left: 0;
         }
+
+        .footer {
+            width: 100%;
+            height: 5vh;
+        }
+
+        .img {
+            position: fixed;
+            top: 100px;
+            left: 605px;
+
+     
+        }
+        .box-1 {
+            position: fixed;
+            top: 150px;
+            left: 620px;
+            background-color: rgba(125, 92, 223, 0.159) ;
+       width: 150px;
+            height: 701px;
+            opacity: 0.8;
+        }
+
+        .img2 {
+            position: fixed;
+            bottom: 0px;
+            left:10px;
+       
+
+     
+        }
+        .box-2 {
+            position: fixed;
+            bottom: 0px;
+            left:0px;
+       background-color: aliceblue  ;
+       width: 630px;
+            height: 80px;
+            opacity: 0.5;
+     
+        }
+
     </style>
 </head>
 
 <body>
-    <nav class="nav"></nav>
+    <nav class="nav">
+        <h3>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R __
+        </h3>
+    </nav>
     <div class="container">
-        <aside class="aside">
-
+        <aside class="aside-1">
+            <div class="box-1"></div>
+            <img src="./img/876824C4438FDC31E6CE0F0B7B905D10.jpg" alt="100%" width="100%">
+            <img class="img" src="./img/未命名-8.png" alt="" width="200px">
         </aside>
+
         <main class="main">
 
         </main>
     </div>
-    <footer class="footer"></footer>
+    <footer class="footer">
+
+        <div class="box-2"></div>
+        <img class="img2" src="./img/未命名10.png" alt="" width="650px">
+    </footer>
 </body>
 
 </html>
