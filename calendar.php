@@ -18,7 +18,15 @@
             font-family: 'Big Shoulders Inline Text', cursive;
             font-size: 58px;
             color: gold;
+            /* left:-30px; */
+            /* background-color: rgba(125, 92, 223,0.5); */
+            width: 469px;
+            height: 65px;
+
+
         }
+
+
 
 
         * {
@@ -211,21 +219,133 @@
 
         }
 
-        .box-nav {
+        .nav-c {
+
             position: fixed;
-            top: 10px;
-            right: -12px;
+            top: 0;
+            left: 0;
 
-            width: 220px;
-            height: 50px;
+            height: 69px;
 
+
+
+        }
+
+        .nav-back {
+            position: fixed;
+            top: 8px;
+            right: 5px;
+
+            width: 240px;
+            height: 60px;
+            padding-left: 24px;
 
             font-family: 'Big Shoulders Inline Text', cursive;
 
-            font-size: 58px;
-            color: rgba(53, 78, 107);
+            color: rgba(125, 92, 223);
             font-weight: bolder;
 
+
+        }
+
+        .nav-back:hover {
+            background-color: #ecd453;
+            border-radius: 20px;
+
+
+        }
+
+        .nav-search>h4 {
+            position: fixed;
+            top: 3px;
+            right: 524px;
+
+            font-family: 'Big Shoulders Inline Text', cursive;
+
+
+            color: rgba(125, 92, 223);
+            font-weight: bolder;
+            font-size: 58px;
+
+        }
+
+        .nav-search>p {
+            position: fixed;
+            top: 24px;
+            right: 491px;
+
+            font-family: 'Big Shoulders Inline Text', cursive;
+
+
+            color: rgba(125, 92, 223);
+            font-weight: bolder;
+            font-size: 40px;
+
+        }
+
+        .nav-search {
+            position: fixed;
+            top: 8px;
+            padding-left: 20px;
+            right: 515px;
+            width: 180px;
+            height: 60px;
+
+        }
+
+        .nav-search:hover {
+
+            background-color: #ecd453;
+            border-radius: 20px;
+        }
+
+        .input-y {
+            position: fixed;
+            left: 790px;
+            top: 20px;
+            width: 60px;
+            height: 40px;
+            font-family: 'Big Shoulders Inline Text', cursive;
+            color: gold;
+            font-weight: bolder;
+        }
+
+        .input-m {
+            position: fixed;
+            left: 870px;
+            top: 20px;
+            width: 60px;
+            height: 40px;
+            font-family: 'Big Shoulders Inline Text', cursive;
+            color: gold;
+            font-weight: bolder;
+
+
+        }
+
+        .input-m>input,
+        .input-y>input {
+            background-color: rgba(240, 156, 90);
+
+
+        }
+
+        input[type="number"] {
+            color: crimson;
+
+        }
+
+        input[type="submit"] {
+            margin-left: 40px;
+            width: 170px;
+            height: 60px;
+            opacity: 0;
+        }
+
+        img:hover {
+            border: 8px solid #ecd453;
+            border-radius: 20px;
+            border-style: double;
 
         }
 
@@ -257,9 +377,11 @@
             color: rgba(53, 78, 107);
             background-color: #ecd453;
         }
-td{
-    width:14%;
-}
+
+        td {
+            width: 14%;
+        }
+
         .td_date,
         .td_weekend {
             font-family: 'Yusei Magic', sans-serif;
@@ -285,13 +407,12 @@ td{
         }
 
         .year {
-            /* background-color: pink; */
+
             width: 337.5px;
             height: 12%;
             display: inline-block;
             position: fixed;
             top: 169px;
-            /* padding-top:5px; */
             font-size: 56px;
             font-family: 'Big Shoulders Inline Text', cursive;
             color: gold;
@@ -303,14 +424,14 @@ td{
         }
 
         .month-number {
-            /* background-color: pink; */
+
             width: 337.5px;
             height: 15%;
             display: inline-block;
             position: fixed;
             top: 75px;
             right: 0px;
-            /* padding-top:5px; */
+
             font-size: 45px;
             font-family: 'Big Shoulders Inline Text', cursive;
             color: gold;
@@ -322,7 +443,6 @@ td{
 
         .month {
 
-            /* background-color:#ecd453; */
             width: 337.5px;
             height: 12%;
             display: inline-block;
@@ -351,11 +471,15 @@ td{
         .a_right {
             top: 400px;
             right: 4px;
+            width: 40px;
+            height: 40px;
         }
+
+
 
         .a_left {
             top: 400px;
- 
+
 
         }
 
@@ -368,9 +492,7 @@ td{
 
 <body>
     <nav class="nav">
-        <h3>
-            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
-        </h3>
+
     </nav>
     <div class="container">
 
@@ -387,7 +509,6 @@ td{
             }
             ?>
 
-            <!-- <img class="img" src="./img/未命名-8.png" alt="" width="130px"> -->
 
         </aside>
         <main class="main">
@@ -403,16 +524,9 @@ td{
                     $firstCell = date("Y-m-d", strtotime("-$thisFirstDate days", strtotime($thisFirstDay)));
 
 
-
-
-
                     echo "<h2 style='text-align:center'>";
                     echo date($year);
                     echo "</h2>";
-
-                    // echo "<h2 style='text-align:center'>";
-                    // echo date($month );
-                    // echo "</h2>";
 
 
                     ?>
@@ -554,25 +668,26 @@ td{
         }
         switch ($img) {
             case "A":
-
-                echo '        <div class="box-1-3" style=" background-color:rgba(244, 71, 24,0.55)">
+                echo"        <div class='nav-c' style='background-color:rgba(244, 71, 24,0.55);             width:480px;'> <h3 id='h3'>
+                C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+                ";
+                echo '<div class="box-1-3" style=" background-color:rgba(244, 71, 24,0.55)">
 
             </div>';
-                echo "        <div class='box-1-2' style='color:rgba(53, 78, 107)'>
+                echo " <div class='box-1-2' style='color:rgba(53, 78, 107)'>
             臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
-                echo "<img src='./img/A.jpg' alt='100%' height='550px'>";
+                echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'><img src='./img/A.jpg' alt='100%' height='550px'></a>";
 
-                echo '<div class="box-2-3"></div>
-        
-        </div>
-    
-        <div class="box-2-2">
+                echo '<div class="box-2-3"></div> </div><div class="box-2-2">
            &nbsp; &nbsp;&nbsp;郷&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp; 統
         </div>';
                 break;
             case "B":
-                echo "<img src='./img/B.jpg' alt='100%' height='550px'>";
+                echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
+                echo "<a href=' target='_blank'><img src='./img/B.jpg' alt='100%' height='550px'></a>";
                 echo '        <div class="box-1-1">
 
                 </div>';
@@ -588,10 +703,13 @@ td{
             </div>';
                 break;
             case "C";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:463px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
-                echo "<img src='./img/C.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/C.jpg' alt='100%' height='550px'></a>";
                 echo "        <div class='box-1-2'>
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
             </div>";
@@ -604,13 +722,16 @@ td{
             </div>';
                 break;
             case "D";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
                 echo "        <div class='box-1-2'>
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
-                echo "<img src='./img/D.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/D.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -620,6 +741,9 @@ td{
                 </div>';
                 break;
             case "E";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
@@ -627,7 +751,7 @@ td{
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
 
-                echo "<img src='./img/E.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/E.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -637,6 +761,9 @@ td{
                 </div>';
                 break;
             case "F";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
@@ -644,7 +771,7 @@ td{
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
 
-                echo "<img src='./img/F.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/F.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -654,13 +781,16 @@ td{
                 </div>';
                 break;
             case "G";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
                 echo "        <div class='box-1-2'>
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
-                echo "<img src='./img/G.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/G.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -670,13 +800,16 @@ td{
                 </div>';
                 break;
             case "H";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
                 echo "        <div class='box-1-2'>
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
             </div>";
-                echo "<img src='./img/H.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/H.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -686,13 +819,16 @@ td{
                 </div>';
                 break;
             case "I";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:473px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
                 echo "        <div class='box-1-2'>
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
-                echo "<img src='./img/I.jpg' alt='100%' height='550px'>";
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'><img src='./img/I.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -702,6 +838,9 @@ td{
                 </div>';
                 break;
             case "J";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
@@ -709,7 +848,7 @@ td{
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
 
-                echo "<img src='./img/J.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/J.jpg' alt='100%' height='550px'</a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -719,13 +858,16 @@ td{
                 </div>';
                 break;
             case "K";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
                 echo '        <div class="box-1-1">
 
             </div>';
                 echo "        <div class='box-1-2'>
                 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
         </div>";
-                echo "<img src='./img/K.jpg' alt='100%' height='550px'>";
+                echo "<a href=' target='_blank'><img src='./img/K.jpg' alt='100%' height='550px'></a>";
                 echo '<div class="box-2-1"></div>
         
                 </div>
@@ -735,7 +877,10 @@ td{
                 </div>';
                 break;
             default;
-                echo "<img src='./img/L.jpg' alt='100%' height='550px'>";
+            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
+C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
+";
+                echo "<a href=' target='_blank'><img src='./img/L.jpg' alt='100%' height='550px'></a>";
                 echo '        <div class="box-1-1">
 
                 </div>';
@@ -756,9 +901,30 @@ td{
 
 
         ?>
-        <div class="box-nav">
+        <div class="nav-back">
             <a href='?year=<?= date('Y'); ?>&month=<?= date('m'); ?>'>Back Now</a>
         </div>
+        <div class="nav-search">
+            <h4>Search</h4>
+            <p>◂
+
+            </p>
+            <form action="check.php">
+                <div class="input-y">
+                    <label for="year">Year</label>
+                    <input type="number">
+                </div>
+                <div class="input-m">
+                    <label for="month">Month</label>
+                    <input type="number">
+                </div>
+                <div class="input-s">
+
+                    <input type="submit" id="submit" value="submit">
+                </div>
+            </form>
+        </div>
+
 </body>
 
 </html>
