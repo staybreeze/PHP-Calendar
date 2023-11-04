@@ -257,7 +257,9 @@
             color: rgba(53, 78, 107);
             background-color: #ecd453;
         }
-
+td{
+    width:14%;
+}
         .td_date,
         .td_weekend {
             font-family: 'Yusei Magic', sans-serif;
@@ -348,7 +350,7 @@
 
         .a_right {
             top: 400px;
-            right: 0px;
+            right: 4px;
         }
 
         .a_left {
@@ -456,8 +458,8 @@
 
 
 
-                    <a class="a_left" href='?year=<?= $prevYear; ?>&month=<?= $prev; ?>'>﹤</a>
-                    <a class="a_right" href='?year=<?= $nextYear; ?>&month=<?= $next; ?>'>﹥</a>
+                    <a class="a_left" href='?year=<?= $prevYear; ?>&month=<?= $prev; ?>'>◂</a>
+                    <a class="a_right" href='?year=<?= $nextYear; ?>&month=<?= $next; ?>'>▸</a>
                 </div>
 
                 <br>
