@@ -10,6 +10,10 @@
 
         @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;700;900&display=swap');
 
+
+        @import url('https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@900&family=Zen+Old+Mincho:wght@900&display=swap');
+
+
         h3 {
             font-family: 'Big Shoulders Inline Text', cursive;
             font-size: 58px;
@@ -51,7 +55,7 @@
             justify-content: center;
         }
 
-        .aside-1 {
+        .aside {
             width: 600px;
             height: 100%;
 
@@ -97,45 +101,131 @@
 
         }
 
-        .img {
-            position: fixed;
-            top: 70px;
-            left: 425px;
-            /* top: 100px;
-            right: 5px; */
 
-
-        }
-
-        .box-1 {
+        .box-1-1 {
             position: fixed;
             top: 100px;
-            left: 436px;
+            left: 440px;
             /* right: 40px; */
-            background-color: rgba(125, 92, 223, 0.419);
+            background-color: rgba(125, 92, 223, 0.3);
             width: 90px;
-            height: 465px;
-            opacity: 0.8;
+            height: 475px;
+            /* opacity: 0.8; */
+            font-family: 'Zen Maru Gothic', serif;
+            font-size: 35px;
+            color: #ecd453;
+            font-weight: bolder;
         }
 
-        .img2 {
+        .box-1-2 {
+            position: fixed;
+            top: 105px;
+            left: 480px;
+
+            width: 90px;
+            height: 475px;
+
+            font-family: 'Zen Maru Gothic', serif;
+            font-size: 35px;
+            color: #ecd453;
+            font-weight: bolder;
+        }
+
+
+        .box-1-3 {
+            position: fixed;
+            top: 100px;
+            left: 480px;
+            /* right: 40px; */
+            background-color: rgba(125, 92, 223, 0.3);
+            width: 50px;
+            height: 475px;
+            /* opacity: 0.8; */
+            font-family: 'Zen Maru Gothic', serif;
+            font-size: 35px;
+            color: #ecd453;
+            font-weight: bolder;
+        }
+
+
+        .box-2-1 {
             position: fixed;
             bottom: 0px;
-            left: 20px;
+            left: 9px;
+            /* right:185px; */
+            background-color: rgba(164, 171, 214, 0.4);
+            width: 451px;
+            height: 50px;
 
-            /* right:175px; */
+            font-family: 'Zen Maru Gothic', serif;
+
+
 
         }
 
-        .box-2 {
+        .box-2-2 {
             position: fixed;
             bottom: 0px;
             left: 5px;
-            /* right:185px; */
-            background-color: rgba(211, 204, 214, 0.859);
+
             width: 435px;
             height: 50px;
+
+            font-family: 'Zen Maru Gothic', serif;
+
+            font-size: 35px;
+            color: rgba(248, 113, 58);
+            font-weight: bolder;
+
+        }
+
+        .box-2-3 {
+            position: fixed;
+            bottom: 0px;
+            left: 0px;
+            /* right:185px; */
+            background-color: rgba(164, 171, 214, 0.4);
+            width: 390px;
+            height: 50px;
+
+            font-family: 'Zen Maru Gothic', serif;
+
+
+
+        }
+
+        .box-3-1 {
+            position: fixed;
+            bottom: 0px;
+            left: 460px;
+
+            width: 140px;
+            height: 50px;
+            background-color: #ecd453;
             opacity: 0.5;
+            font-family: 'Zen Maru Gothic', serif;
+
+            font-size: 35px;
+            color: rgba(248, 113, 58);
+            font-weight: bolder;
+
+        }
+
+        .box-nav {
+            position: fixed;
+            top: 10px;
+            right: -12px;
+
+            width: 220px;
+            height: 50px;
+
+
+            font-family: 'Big Shoulders Inline Text', cursive;
+
+            font-size: 58px;
+            color: rgba(53, 78, 107);
+            font-weight: bolder;
+
 
         }
 
@@ -144,26 +234,25 @@
             margin: auto;
         }
 
-        .tr_special  {
-            width: 95px;
+        .tr_special {
+
             height: 41.3px;
             text-align: center;
         }
 
-        .tr_normal{
-            /* width: 95px; */
+        .tr_normal {
+
             height: 50px;
             text-align: center;
         }
 
         .week {
             width: 95px;
-            height: 50px; 
+            height: 50px;
             text-align: center;
             font-size: large;
             font-weight: bolder;
-            background-color: beige;
-            /* font-family: 'Yusei Magic', sans-serif; */
+
             font-family: 'Big Shoulders Inline Text', cursive;
             color: rgba(53, 78, 107);
             background-color: #ecd453;
@@ -172,7 +261,7 @@
         .td_date,
         .td_weekend {
             font-family: 'Yusei Magic', sans-serif;
-            /* font-family: 'Big Shoulders Inline Text', cursive; */
+
         }
 
         .td_date {
@@ -180,7 +269,7 @@
         }
 
         .year-number {
-            /* background-color: #ecd453; */
+
             width: 337.5px;
             height: 15%;
             display: inline-block;
@@ -264,6 +353,7 @@
 
         .a_left {
             top: 400px;
+ 
 
         }
 
@@ -282,8 +372,8 @@
     </nav>
     <div class="container">
 
-        <aside class="aside-1">
-            <div class="box-1"></div>
+        <aside class="aside">
+
             <?php
 
             if (isset($_GET['month']) && (isset($_GET['year']))) {
@@ -384,7 +474,7 @@
                     </tr>
                     <?php
                     for ($i = 0; $i < $weeks; $i++) {
-                        if ($weeks <=5) {
+                        if ($weeks <= 5) {
 
                             echo "<tr class='tr_normal'>";
                         } else {
@@ -413,7 +503,7 @@
                     ?>
             </div>
             <div class="section2">
-                <p><small>Copyright WSL Web All Rights Reserved./Images credit all for 鄉原古統.</small></p>
+                <p><small>&copy;Copyright WSL Web All Rights Reserved./Images credit all for 鄉原古統.</small></p>
 
             </div>
         </main>
@@ -424,83 +514,249 @@
     </div>
     <div class="box-img">
         <?php
-        if ($month == 11) {
+        if ($month == 1) {
             $img = "A";
         }
-        if ($month == 12) {
+        if ($month == 2) {
             $img = "B";
         }
-        if ($month == 1) {
+        if ($month == 3) {
             $img = "C";
         }
-        if ($month == 2) {
+        if ($month == 4) {
             $img = "D";
         }
-        if ($month == 3) {
+        if ($month == 5) {
             $img = "E";
         }
-        if ($month == 4) {
-            $img = "F";
-        }
-        if ($month == 5) {
-            $img = "G";
-        }
         if ($month == 6) {
-            $img = "G";
+            $img = "F";
         }
         if ($month == 7) {
             $img = "G";
         }
         if ($month == 8) {
-            $img = "G";
+            $img = "H";
         }
         if ($month == 9) {
-            $img = "G";
+            $img = "I";
         }
         if ($month == 10) {
-            $img = "G";
+            $img = "J";
+        }
+        if ($month == 11) {
+            $img = "K";
+        }
+        if ($month == 12) {
+            $img = "L";
         }
         switch ($img) {
-
             case "A":
-                echo "<img src='./img/B.jpg' alt='100%' height='550px'>";
+
+                echo '        <div class="box-1-3" style=" background-color:rgba(244, 71, 24,0.55)">
+
+            </div>';
+                echo "        <div class='box-1-2' style='color:rgba(53, 78, 107)'>
+            臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
+                echo "<img src='./img/A.jpg' alt='100%' height='550px'>";
+
+                echo '<div class="box-2-3"></div>
+        
+        </div>
+    
+        <div class="box-2-2">
+           &nbsp; &nbsp;&nbsp;郷&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp; 統
+        </div>';
                 break;
             case "B":
-                echo "<img src='./img/C.jpg' alt='100%' height='550px'>";
+                echo "<img src='./img/B.jpg' alt='100%' height='550px'>";
+                echo '        <div class="box-1-1">
+
+                </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+            </div>";
+                echo '<div class="box-2-1"></div>
+        
+            </div>
+        
+            <div class="box-2-2">
+                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+            </div>';
                 break;
             case "C";
+                echo '        <div class="box-1-1">
 
-                echo "<img src='./img/D.jpg' alt='100%' height='550px'>";
+            </div>';
+                echo "<img src='./img/C.jpg' alt='100%' height='550px'>";
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+            </div>";
+                echo '<div class="box-2-1"></div>
+        
+            </div>
+        
+            <div class="box-2-2">
+                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+            </div>';
                 break;
             case "D";
+                echo '        <div class="box-1-1">
 
-
-                echo "<img src='./img/E.jpg' alt='100%' height='550px'>";
-
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
+                echo "<img src='./img/D.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
                 break;
             case "E";
+                echo '        <div class="box-1-1">
 
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
 
-                echo "<img src='./img/F.jpg' alt='100%' height='550px'>";
-
+                echo "<img src='./img/E.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
                 break;
             case "F";
+                echo '        <div class="box-1-1">
 
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
 
+                echo "<img src='./img/F.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
+                break;
+            case "G";
+                echo '        <div class="box-1-1">
+
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
                 echo "<img src='./img/G.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
+                break;
+            case "H";
+                echo '        <div class="box-1-1">
 
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+            </div>";
+                echo "<img src='./img/H.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
+                break;
+            case "I";
+                echo '        <div class="box-1-1">
+
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
+                echo "<img src='./img/I.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
+                break;
+            case "J";
+                echo '        <div class="box-1-1">
+
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
+
+                echo "<img src='./img/J.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
+                break;
+            case "K";
+                echo '        <div class="box-1-1">
+
+            </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+        </div>";
+                echo "<img src='./img/K.jpg' alt='100%' height='550px'>";
+                echo '<div class="box-2-1"></div>
+        
+                </div>
+            
+                <div class="box-2-2">
+                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+                </div>';
                 break;
             default;
-                echo "<img src='./img/A.jpg' alt='100%' height='550px'>";
+                echo "<img src='./img/L.jpg' alt='100%' height='550px'>";
+                echo '        <div class="box-1-1">
+
+                </div>';
+                echo "        <div class='box-1-2'>
+                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+            </div>";
+
+                echo '<div class="box-2-1"></div>
+        
+            </div>
+        
+            <div class="box-2-2">
+                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+            </div>';
                 break;
         }
 
 
 
         ?>
-        <div class="box-2"></div>
-        <!-- <img class="img2" src="./img/未命名10.png" alt="" width="400px"> -->
-    </div>
+        <div class="box-nav">
+            <a href='?year=<?= date('Y'); ?>&month=<?= date('m'); ?>'>Back Now</a>
+        </div>
 </body>
 
 </html>
