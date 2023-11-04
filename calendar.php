@@ -258,7 +258,7 @@
         .nav-search>h4 {
             position: fixed;
             top: 3px;
-            right: 524px;
+            right: 500px;
 
             font-family: 'Big Shoulders Inline Text', cursive;
 
@@ -272,7 +272,7 @@
         .nav-search>p {
             position: fixed;
             top: 24px;
-            right: 491px;
+            right: 467px;
 
             font-family: 'Big Shoulders Inline Text', cursive;
 
@@ -287,7 +287,7 @@
             position: fixed;
             top: 8px;
             padding-left: 20px;
-            right: 515px;
+            right: 492px;
             width: 180px;
             height: 60px;
 
@@ -301,7 +301,7 @@
 
         .input-y {
             position: fixed;
-            left: 790px;
+            left: 814px;
             top: 20px;
             width: 60px;
             height: 40px;
@@ -312,7 +312,7 @@
 
         .input-m {
             position: fixed;
-            left: 870px;
+            left: 894px;
             top: 20px;
             width: 60px;
             height: 40px;
@@ -434,7 +434,8 @@
 
             font-size: 45px;
             font-family: 'Big Shoulders Inline Text', cursive;
-            color: gold;
+            color: rgba(240, 156, 90);
+            ;
             background-color: rgba(125, 92, 223, 0.419);
             padding-top: 8px;
 
@@ -452,12 +453,23 @@
             padding-top: 5px;
             font-size: 56px;
             font-family: 'Big Shoulders Inline Text', cursive;
-            color: gold;
+            color: rgba(240, 156, 90);
             text-align: center;
             font-weight: bolder;
             background-color: rgba(125, 92, 223, 0.419);
             border-bottom: 2px solid rgba(125, 92, 223);
 
+
+        }
+
+        .slash {
+
+            position: fixed;
+            top: 38.5px;
+            right:292px;
+            color: rgba(125, 92, 223);
+            font-size: 174px;
+            font-family: 'Big Shoulders Inline Text', cursive;
 
         }
 
@@ -668,7 +680,7 @@
         }
         switch ($img) {
             case "A":
-                echo"        <div class='nav-c' style='background-color:rgba(244, 71, 24,0.55);             width:480px;'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background-color:rgba(244, 71, 24,0.55);             width:480px;'> <h3 id='h3'>
                 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 ";
                 echo '<div class="box-1-3" style=" background-color:rgba(244, 71, 24,0.55)">
@@ -684,7 +696,7 @@
         </div>';
                 break;
             case "B":
-                echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo "<a href=' target='_blank'><img src='./img/B.jpg' alt='100%' height='550px'></a>";
@@ -703,7 +715,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
             </div>';
                 break;
             case "C";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:463px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:463px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -722,7 +734,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
             </div>';
                 break;
             case "D";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -741,7 +753,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "E";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -761,7 +773,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "F";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -781,7 +793,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "G";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -800,7 +812,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "H";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -819,7 +831,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "I";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:473px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:473px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -838,7 +850,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "J";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -858,7 +870,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             case "K";
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo '        <div class="box-1-1">
@@ -877,7 +889,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>';
                 break;
             default;
-            echo"        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
+                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
 ";
                 echo "<a href=' target='_blank'><img src='./img/L.jpg' alt='100%' height='550px'></a>";
@@ -924,7 +936,9 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
                 </div>
             </form>
         </div>
-
+        <div class="slash">
+      /
+        </div>
 </body>
 
 </html>
