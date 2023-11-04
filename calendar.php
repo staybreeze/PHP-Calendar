@@ -34,8 +34,12 @@
         .nav {
             width: 100vw;
             height: 12vh;
-            border-bottom: 5px solid rgba(125, 92, 223);
+            border: 5px solid rgba(125, 92, 223);
             border-style: double;
+            border-left: none;
+            border-top: none;
+            padding-left: 5px;
+            padding-top: 3px;
 
         }
 
@@ -61,8 +65,9 @@
             width: calc(100% - 600px);
             height: 100%;
             border-left: 5px solid rgba(125, 92, 223);
+            border-right: 5px solid rgba(125, 92, 223);
             border-top: 0;
-            border-right: 0;
+            /* border-right: 0; */
             border-style: double;
             padding-top: 180px;
 
@@ -134,21 +139,27 @@
 
         }
 
-        table,
-        th,
-        tr,
-        td {
+        table {
             width: 600px;
             margin: auto;
         }
 
-        td {
+        .tr_special  {
             width: 95px;
+            height: 41.3px;
+            text-align: center;
+        }
+
+        .tr_normal{
+            /* width: 95px; */
             height: 50px;
             text-align: center;
         }
 
         .week {
+            width: 95px;
+            height: 50px; 
+            text-align: center;
             font-size: large;
             font-weight: bolder;
             background-color: beige;
@@ -373,7 +384,14 @@
                     </tr>
                     <?php
                     for ($i = 0; $i < $weeks; $i++) {
-                        echo "<tr>";
+                        if ($weeks <=5) {
+
+                            echo "<tr class='tr_normal'>";
+                        } else {
+                            echo "<tr class='tr_special'>";
+                        }
+
+
                         for ($j = 0; $j < 7; $j++) {
                             $addDays = 7 * $i + $j;
                             $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
@@ -385,6 +403,7 @@
                             if (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))) {
                                 echo date("j", $thisCellDate);
                             }
+
                             echo "</td>";
                         }
                         echo "</tr>";
