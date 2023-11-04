@@ -49,12 +49,9 @@
 
         .aside-1 {
             width: 600px;
-            height: 520px;
+            height: 100%;
 
-            border-right: 1px solid rgba(125, 92, 223);
-            /* border-style: double; */
-            /* background-color: cadetblue ; */
-            /* border-left:none; */
+
 
         }
 
@@ -62,25 +59,42 @@
 
         .main {
             width: calc(100% - 600px);
-            height: 520px;
-            border-left: 1px solid rgba(125, 92, 223);
-
+            height: 100%;
+            border-left: 5px solid rgba(125, 92, 223);
+            border-top: 0;
+            border-right: 0;
+            border-style: double;
             padding-top: 180px;
 
 
         }
 
-        .footer {
+        .section2 {
+            margin-top: 10px;
             width: 100%;
             height: 5vh;
             border-top: 5px solid rgba(125, 92, 223);
             border-style: double;
+            border-left: 0.5px solid rgba(125, 92, 223);
+            border-right: 0;
+
+            text-align: center;
+            font-size: 12px;
+            padding-top: 4px;
+            color: #ecd453;
+        }
+
+        .box-img {
+            width: 600px;
+            height: 100%;
+            position: fixed;
+            top: 75px;
 
         }
 
         .img {
             position: fixed;
-            top: 60px;
+            top: 70px;
             left: 425px;
             /* top: 100px;
             right: 5px; */
@@ -110,7 +124,7 @@
 
         .box-2 {
             position: fixed;
-            bottom: 10px;
+            bottom: 0px;
             left: 5px;
             /* right:185px; */
             background-color: rgba(211, 204, 214, 0.859);
@@ -138,7 +152,8 @@
             font-size: large;
             font-weight: bolder;
             background-color: beige;
-            font-family: 'Yusei Magic', sans-serif;
+            /* font-family: 'Yusei Magic', sans-serif; */
+            font-family: 'Big Shoulders Inline Text', cursive;
             color: rgba(53, 78, 107);
             background-color: #ecd453;
         }
@@ -146,6 +161,7 @@
         .td_date,
         .td_weekend {
             font-family: 'Yusei Magic', sans-serif;
+            /* font-family: 'Big Shoulders Inline Text', cursive; */
         }
 
         .td_date {
@@ -154,12 +170,12 @@
 
         .year-number {
             /* background-color: #ecd453; */
-            width: 339.5px;
+            width: 337.5px;
             height: 15%;
             display: inline-block;
             position: fixed;
             top: 75px;
-            padding-top: 5px;
+            padding-top: 8px;
             font-size: 45px;
             font-family: 'Big Shoulders Inline Text', cursive;
             color: gold;
@@ -168,7 +184,7 @@
 
         .year {
             /* background-color: pink; */
-            width: 339.5px;
+            width: 337.5px;
             height: 12%;
             display: inline-block;
             position: fixed;
@@ -186,7 +202,7 @@
 
         .month-number {
             /* background-color: pink; */
-            width: 339.5px;
+            width: 337.5px;
             height: 15%;
             display: inline-block;
             position: fixed;
@@ -197,13 +213,15 @@
             font-family: 'Big Shoulders Inline Text', cursive;
             color: gold;
             background-color: rgba(125, 92, 223, 0.419);
+            padding-top: 8px;
+
 
         }
 
         .month {
 
             /* background-color:#ecd453; */
-            width: 339.5px;
+            width: 337.5px;
             height: 12%;
             display: inline-block;
             position: fixed;
@@ -220,41 +238,42 @@
 
 
         }
-        a{
-         text-decoration: none;
-         color:rgba(125, 92, 223) ;
-         font-size: 50px;
-         position: fixed;
-        }
-        .a_right{
-            top:400px;
-            right:0px;
+
+        a {
+            text-decoration: none;
+            color: rgba(125, 92, 223);
+            font-size: 50px;
+            position: fixed;
         }
 
-        .a_left{
-            top:400px;
+        .a_right {
+            top: 400px;
+            right: 0px;
+        }
+
+        .a_left {
+            top: 400px;
 
         }
 
+        footer {
+            width: 100%;
+            height: 100%
+        }
     </style>
 </head>
 
 <body>
     <nav class="nav">
         <h3>
-       C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
         </h3>
     </nav>
     <div class="container">
 
         <aside class="aside-1">
             <div class="box-1"></div>
-            <img src="./img/629F72D2930AA801F548F23C5F94A5DE.jpg" alt="100%" width="450px">
-            <img class="img" src="./img/未命名-8.png" alt="" width="130px">
-        </aside>
-        <main class="main">
             <?php
-
 
             if (isset($_GET['month']) && (isset($_GET['year']))) {
                 $month = $_GET['month'];
@@ -263,120 +282,206 @@
                 $month = date('m');
                 $year = date('Y');
             }
-
             ?>
-            <div class="year-number">
-                <?php
-                $thisMonth = date("Y");
-                $thisFirstDay = date("{$year}-{$month}-1");
-                $thisFirstDate = date('w', strtotime($thisFirstDay));
-                $thisMonthDays = date("t");
-                $thisLastDay = date("{$year}-{$month}-$thisMonthDays");
-                $weeks = ceil(($thisMonthDays + $thisFirstDate) / 7);
-                $firstCell = date("Y-m-d", strtotime("-$thisFirstDate days", strtotime($thisFirstDay)));
+
+            <!-- <img class="img" src="./img/未命名-8.png" alt="" width="130px"> -->
+
+        </aside>
+        <main class="main">
+            <div class="section1">
+                <div class="year-number">
+                    <?php
+                    $thisMonth = date("Y");
+                    $thisFirstDay = date("{$year}-{$month}-1");
+                    $thisFirstDate = date('w', strtotime($thisFirstDay));
+                    $thisMonthDays = date("t");
+                    $thisLastDay = date("{$year}-{$month}-$thisMonthDays");
+                    $weeks = ceil(($thisMonthDays + $thisFirstDate) / 7);
+                    $firstCell = date("Y-m-d", strtotime("-$thisFirstDate days", strtotime($thisFirstDay)));
 
 
 
 
 
-                echo "<h2 style='text-align:center'>";
-                echo date($year);
-                echo "</h2>";
+                    echo "<h2 style='text-align:center'>";
+                    echo date($year);
+                    echo "</h2>";
 
-                // echo "<h2 style='text-align:center'>";
-                // echo date($month );
-                // echo "</h2>";
-
-
-                ?>
-            </div>
-            <div class="month-number">
-                <?php
-
-                echo "<h2 style='text-align:center'>";
-                echo date($month);
-                echo "</h2>";
-                ?>
-            </div>
-            <div class="year">YEAR</div>
-            <div class="month">MONTH</div>
-            <div style='display:flex;margin:auto;justify-content:space-between'>
-
-                <?php
-
-                $nextYear = $year;
-                $prevYear = $year;
-
-                if (($month + 1) > 12) {
-
-                    $next = 1;
-                    $nextYear = $nextYear + 1;
-                } else {
-
-                    $next = $month + 1;
-
-                }
-
-                if (($month - 1) < 1) {
-
-                    $prev = 12;
-                    $prevYear = $year - 1;
-                } else {
-                    $prev = $month - 1;
-
-                }
-
-                ?>
+                    // echo "<h2 style='text-align:center'>";
+                    // echo date($month );
+                    // echo "</h2>";
 
 
+                    ?>
+                </div>
+                <div class="month-number">
+                    <?php
 
-       
+                    echo "<h2 style='text-align:center'>";
+                    echo date($month);
+                    echo "</h2>";
+                    ?>
+                </div>
+                <div class="year">YEAR</div>
+                <div class="month">MONTH</div>
+                <div style='display:flex;margin:auto;justify-content:space-between'>
 
+                    <?php
 
-                <a class="a_left" href='?year=<?= $prevYear; ?>&month=<?= $prev; ?>'>﹤</a>
-                <a class="a_right" href='?year=<?= $nextYear; ?>&month=<?= $next; ?>'>﹥</a>
-            </div>
-            <br>
-            <table>
-                <tr class="week">
-                    <td>日</td>
-                    <td>一</td>
-                    <td>二</td>
-                    <td>三</td>
-                    <td>四</td>
-                    <td>五</td>
-                    <td>六</td>
-                </tr>
-                <?php
-                for ($i = 0; $i < $weeks; $i++) {
-                    echo "<tr>";
-                    for ($j = 0; $j < 7; $j++) {
-                        $addDays = 7 * $i + $j;
-                        $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
-                        if (date('w', $thisCellDate) == 0 || date('w', $thisCellDate) == 6) {
-                            echo "<td style='background:rgba(125, 92, 223,0.5);color:orange' class='td_weekend'>";
-                        } else {
-                            echo "<td  style='background:rgba(211, 204, 214);color:gray' class='td_date'>";
-                        }
-                        if (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))) {
-                            echo date("j", $thisCellDate);
-                        }
-                        echo "</td>";
+                    $nextYear = $year;
+                    $prevYear = $year;
+
+                    if (($month + 1) > 12) {
+
+                        $next = 1;
+                        $nextYear = $nextYear + 1;
+                    } else {
+
+                        $next = $month + 1;
                     }
-                    echo "</tr>";
-                }
 
-                echo "</table>";
-                ?>
+                    if (($month - 1) < 1) {
+
+                        $prev = 12;
+                        $prevYear = $year - 1;
+                    } else {
+                        $prev = $month - 1;
+                    }
+
+                    ?>
+
+
+
+
+
+
+                    <a class="a_left" href='?year=<?= $prevYear; ?>&month=<?= $prev; ?>'>﹤</a>
+                    <a class="a_right" href='?year=<?= $nextYear; ?>&month=<?= $next; ?>'>﹥</a>
+                </div>
+
+                <br>
+                <table>
+                    <tr class="week">
+                        <td>Sun
+                        </td>
+                        <td>Mon</td>
+                        <td>Tue</td>
+                        <td>Wed</td>
+                        <td>Thr</td>
+                        <td>Fri</td>
+                        <td>Sat</td>
+                    </tr>
+                    <?php
+                    for ($i = 0; $i < $weeks; $i++) {
+                        echo "<tr>";
+                        for ($j = 0; $j < 7; $j++) {
+                            $addDays = 7 * $i + $j;
+                            $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
+                            if (date('w', $thisCellDate) == 0 || date('w', $thisCellDate) == 6) {
+                                echo "<td style='background:rgba(125, 92, 223,0.5);color:orange' class='td_weekend'>";
+                            } else {
+                                echo "<td  style='background:rgba(211, 204, 214);color:gray' class='td_date'>";
+                            }
+                            if (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))) {
+                                echo date("j", $thisCellDate);
+                            }
+                            echo "</td>";
+                        }
+                        echo "</tr>";
+                    }
+
+                    echo "</table>";
+                    ?>
+            </div>
+            <div class="section2">
+                <p><small>Copyright WSL Web All Rights Reserved./Images credit all for 鄉原古統.</small></p>
+
+            </div>
         </main>
+        <aside class="aside-1">
+
 
 
     </div>
-    <footer class="footer">
+    <div class="box-img">
+        <?php
+        if ($month == 11) {
+            $img = "A";
+        }
+        if ($month == 12) {
+            $img = "B";
+        }
+        if ($month == 1) {
+            $img = "C";
+        }
+        if ($month == 2) {
+            $img = "D";
+        }
+        if ($month == 3) {
+            $img = "E";
+        }
+        if ($month == 4) {
+            $img = "F";
+        }
+        if ($month == 5) {
+            $img = "G";
+        }
+        if ($month == 6) {
+            $img = "G";
+        }
+        if ($month == 7) {
+            $img = "G";
+        }
+        if ($month == 8) {
+            $img = "G";
+        }
+        if ($month == 9) {
+            $img = "G";
+        }
+        if ($month == 10) {
+            $img = "G";
+        }
+        switch ($img) {
 
+            case "A":
+                echo "<img src='./img/B.jpg' alt='100%' height='550px'>";
+                break;
+            case "B":
+                echo "<img src='./img/C.jpg' alt='100%' height='550px'>";
+                break;
+            case "C";
+
+                echo "<img src='./img/D.jpg' alt='100%' height='550px'>";
+                break;
+            case "D";
+
+
+                echo "<img src='./img/E.jpg' alt='100%' height='550px'>";
+
+                break;
+            case "E";
+
+
+                echo "<img src='./img/F.jpg' alt='100%' height='550px'>";
+
+                break;
+            case "F";
+
+
+                echo "<img src='./img/G.jpg' alt='100%' height='550px'>";
+
+                break;
+            default;
+                echo "<img src='./img/A.jpg' alt='100%' height='550px'>";
+                break;
+        }
+
+
+
+        ?>
         <div class="box-2"></div>
-        <img class="img2" src="./img/未命名10.png" alt="" width="400px">
-    </footer>
+        <!-- <img class="img2" src="./img/未命名10.png" alt="" width="400px"> -->
+    </div>
 </body>
 
 </html>
