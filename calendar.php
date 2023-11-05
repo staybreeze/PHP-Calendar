@@ -15,6 +15,7 @@
 
 
         h3 {
+
             font-family: 'Big Shoulders Inline Text', cursive;
             font-size: 58px;
             color: gold;
@@ -22,7 +23,8 @@
             /* background-color: rgba(125, 92, 223,0.5); */
             width: 469px;
             height: 65px;
-
+            padding-top: 3px;
+            padding-left: 2px;
 
         }
 
@@ -140,20 +142,20 @@
         }
 
 
-        .box-1-3 {
+        /* .box-1-3 {
             position: fixed;
             top: 100px;
             left: 480px;
-            /* right: 40px; */
+
             background-color: rgba(125, 92, 223, 0.3);
             width: 50px;
             height: 475px;
-            /* opacity: 0.8; */
+
             font-family: 'Zen Maru Gothic', serif;
             font-size: 35px;
             color: #ecd453;
             font-weight: bolder;
-        }
+        } */
 
 
         .box-author-bg {
@@ -213,6 +215,7 @@
 
         }
 
+        /* 
         .box-3-1 {
             position: fixed;
             bottom: 0px;
@@ -228,9 +231,9 @@
             color: rgba(248, 113, 58);
             font-weight: bolder;
 
-        }
+        } */
 
-        .nav-c {
+        .nav-calendar {
             position: fixed;
             top: 0;
             left: 0;
@@ -276,9 +279,18 @@
 
         }
 
-        .nav-search>p {
+        .search-icon-Jan {
             position: fixed;
-            top: 24px;
+            top: 17px;
+            right: 467px;
+            color: rgba(125, 92, 223);
+            font-size: 40px;
+
+        }
+
+        .search-icon-notJan {
+            position: fixed;
+            top: 27.5px;
             right: 467px;
             color: rgba(125, 92, 223);
             font-size: 40px;
@@ -333,8 +345,9 @@
         }
 
         input[type="number"] {
-            color: crimson;
-
+            color: rgba(26, 106, 64);
+            font-family: 'Zen Maru Gothic', serif;
+            font-weight: bolder;
         }
 
         input[type="submit"] {
@@ -681,9 +694,18 @@
         }
         switch ($img) {
             case "A":
+                echo "<div class='nav-calendar' style='background-color:rgba(244, 71, 24,0.55);width:481px;'>
+                <h3 id='h3'>
+                C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+                </h3></div>";
 
                 break;
             case "B":
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:474px'>
+                <h3 id='h3'>
+                C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+                </h3>
+                </div>";
 
                 echo "<a href='https://memory.culture.tw/Home/Detail?Id=501875&IndexCode=Culture_Object' target='_blank'>
                 <img src='./img/B.jpg' alt='100%' height='550px'>
@@ -691,50 +713,90 @@
 
                 break;
             case "C";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:463px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
                 echo "<a href='https://memory.culture.tw/Home/Detail?Id=501870&IndexCode=Culture_Object' target='_blank'><img src='./img/C.jpg' alt='100%' height='550px'></a>";
 
                 break;
             case "D";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:475.5px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
-                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501882&IndexCode=Culture_Object' target='_blank'><img src='./img/D.jpg' alt='100%' height='550px'>
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'><img src='./img/D.jpg' alt='100%' height='550px'>
                 </a>";
 
                 break;
             case "E";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:471.5px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
-                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501873&IndexCode=Culture_Object' target='_blank'><img src='./img/E.jpg' alt='100%' height='550px'>
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'><img src='./img/E.jpg' alt='100%' height='550px'>
                 </a>";
 
                 break;
             case "F";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:465.5px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
-                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501881&IndexCode=Culture_Object' target='_blank'>
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501882&IndexCode=Culture_Object' target='_blank'>
                 <img src='./img/F.jpg' alt='100%' height='550px'>
                 </a>";
 
                 break;
             case "G";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:470.2px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
-                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'>
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501873&IndexCode=Culture_Object' target='_blank'>
                 <img src='./img/G.jpg' alt='100%' height='550px'>
                 </a>";
 
                 break;
             case "H";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:474.5px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
-                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'>
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501881&IndexCode=Culture_Object' target='_blank'>
                 <img src='./img/H.jpg' alt='100%' height='550px'>
                 </a>";
 
                 break;
             case "I";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:473.5px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
                 echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'><img src='./img/I.jpg' alt='100%' height='550px'>
                 </a>";
 
                 break;
             case "J";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:464.5px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
 
                 echo "<a href='https://memory.culture.tw/Home/Detail?Id=501865&IndexCode=Culture_Object' target='_blank'>
@@ -742,6 +804,11 @@
 
                 break;
             case "K";
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:470px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
                 echo "<a href='https://memory.culture.tw/Home/Detail?Id=501879&IndexCode=Culture_Object' target='_blank'>
                 <img src='./img/K.jpg' alt='100%' height='550px'>
@@ -749,6 +816,11 @@
 
                 break;
             default;
+                echo "<div class='nav-calendar' style='background:rgba(125, 92, 223, 0.5);width:474.2px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
                 echo "<a href='https://memory.culture.tw/Home/Detail?Id=501880&IndexCode=Culture_Object' target='_blank'>
                 <img src='./img/L.jpg' alt='100%' height='550px'></a>";
@@ -760,10 +832,7 @@
         <?php
 
         if ($month == 1) {
-            echo "<div class='nav-c' style='background-color:rgba(244, 71, 24,0.55);width:480px;'>
-            <h3 id='h3'>
-            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
-            </h3></div>";
+
             echo '<div class="box-title-bg" style=" background-color:rgba(244, 71, 24,0.55)"></div>';
             echo " <div class='box-title-w' style='color:rgba(232, 176, 4)'>
             臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br></div>";
@@ -775,12 +844,10 @@
             <div class="box-author-w">
             &nbsp; &nbsp;&nbsp;郷&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp; 統
             </div>';
+            echo "        <div class='search-icon-Jan'>
+            ◂
+             </div>";
         } else {
-            echo "<div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'>
-            <h3 id='h3'>
-            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
-            </h3>
-            </div>";
 
             echo '<div class="box-title-bg">
             </div>';
@@ -796,6 +863,9 @@
             <div class="box-author-w">
             &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
             </div>';
+            echo "        <div class='search-icon-notJan'>
+            ◂
+             </div>";
         }
         ?>
         <div class="nav-back">
@@ -803,24 +873,23 @@
         </div>
         <div class="nav-search">
             <h4>Search</h4>
-            <p>◂
 
-            </p>
             <form action="check.php" method="get">
                 <div class="input-y">
                     <label for="year">Year</label>
-                    <input type="number" name="year" value="year">
+                    <input type="number" name="year">
                 </div>
                 <div class="input-m">
                     <label for="month">Month</label>
-                    <input type="number" name="month" value="month">
+                    <input type="number" name="month">
                 </div>
                 <div class="input-s">
-                    <input type="submit" id="submit" value="Submit">
+
+                    <input type="submit" id="submit" value="submit">
                 </div>
             </form>
-
         </div>
+
         <div class="slash">
             /
         </div>
