@@ -110,7 +110,7 @@
         }
 
 
-        .box-1-1 {
+        .box-title-bg {
             position: fixed;
             top: 100px;
             left: 440px;
@@ -125,7 +125,7 @@
             font-weight: bolder;
         }
 
-        .box-1-2 {
+        .box-title-w {
             position: fixed;
             top: 105px;
             left: 480px;
@@ -156,7 +156,7 @@
         }
 
 
-        .box-2-1 {
+        .box-author-bg {
             position: fixed;
             bottom: 0px;
             left: 9px;
@@ -165,13 +165,9 @@
             width: 451px;
             height: 50px;
 
-            font-family: 'Zen Maru Gothic', serif;
-
-
-
         }
 
-        .box-2-2 {
+        .box-author-w {
             position: fixed;
             bottom: 0px;
             left: 5px;
@@ -187,11 +183,18 @@
 
         }
 
-        .box-2-3 {
+        .box-author-bg:hover {
+            border: 8px solid rgba(240, 156, 90);
+            ;
+            border-radius: 20px;
+            border-style: double;
+
+        }
+
+        .box-author-bg-smaller {
             position: fixed;
             bottom: 0px;
-            left: 0px;
-            /* right:185px; */
+
             background-color: rgba(164, 171, 214, 0.4);
             width: 390px;
             height: 50px;
@@ -199,6 +202,14 @@
             font-family: 'Zen Maru Gothic', serif;
 
 
+
+        }
+
+        .box-author-bg-smaller:hover {
+            border: 8px solid rgba(240, 156, 90);
+            ;
+            border-radius: 20px;
+            border-style: double;
 
         }
 
@@ -220,15 +231,11 @@
         }
 
         .nav-c {
-
             position: fixed;
             top: 0;
             left: 0;
 
             height: 69px;
-
-
-
         }
 
         .nav-back {
@@ -273,12 +280,7 @@
             position: fixed;
             top: 24px;
             right: 467px;
-
-            font-family: 'Big Shoulders Inline Text', cursive;
-
-
             color: rgba(125, 92, 223);
-            font-weight: bolder;
             font-size: 40px;
 
         }
@@ -466,7 +468,7 @@
 
             position: fixed;
             top: 38.5px;
-            right:292px;
+            right: 292px;
             color: rgba(125, 92, 223);
             font-size: 174px;
             font-family: 'Big Shoulders Inline Text', cursive;
@@ -609,7 +611,6 @@
                             echo "<tr class='tr_special'>";
                         }
 
-
                         for ($j = 0; $j < 7; $j++) {
                             $addDays = 7 * $i + $j;
                             $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
@@ -680,238 +681,122 @@
         }
         switch ($img) {
             case "A":
-                echo "        <div class='nav-c' style='background-color:rgba(244, 71, 24,0.55);             width:480px;'> <h3 id='h3'>
-                C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-                ";
-                echo '<div class="box-1-3" style=" background-color:rgba(244, 71, 24,0.55)">
 
-            </div>';
-                echo " <div class='box-1-2' style='color:rgba(53, 78, 107)'>
-            臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
-                echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'><img src='./img/A.jpg' alt='100%' height='550px'></a>";
-
-                echo '<div class="box-2-3"></div> </div><div class="box-2-2">
-           &nbsp; &nbsp;&nbsp;郷&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp; 統
-        </div>';
                 break;
             case "B":
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo "<a href=' target='_blank'><img src='./img/B.jpg' alt='100%' height='550px'></a>";
-                echo '        <div class="box-1-1">
 
-                </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-            </div>";
-                echo '<div class="box-2-1"></div>
-        
-            </div>
-        
-            <div class="box-2-2">
-                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-            </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501875&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/B.jpg' alt='100%' height='550px'>
+                </a>";
+
                 break;
             case "C";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:463px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "<a href=' target='_blank'><img src='./img/C.jpg' alt='100%' height='550px'></a>";
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-            </div>";
-                echo '<div class="box-2-1"></div>
-        
-            </div>
-        
-            <div class="box-2-2">
-                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-            </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501870&IndexCode=Culture_Object' target='_blank'><img src='./img/C.jpg' alt='100%' height='550px'></a>";
+
                 break;
             case "D";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
-                echo "<a href=' target='_blank'><img src='./img/D.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501882&IndexCode=Culture_Object' target='_blank'><img src='./img/D.jpg' alt='100%' height='550px'>
+                </a>";
+
                 break;
             case "E";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501873&IndexCode=Culture_Object' target='_blank'><img src='./img/E.jpg' alt='100%' height='550px'>
+                </a>";
 
-                echo "<a href=' target='_blank'><img src='./img/E.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
                 break;
             case "F";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501881&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/F.jpg' alt='100%' height='550px'>
+                </a>";
 
-                echo "<a href=' target='_blank'><img src='./img/F.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
                 break;
             case "G";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:475px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
-                echo "<a href=' target='_blank'><img src='./img/G.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/G.jpg' alt='100%' height='550px'>
+                </a>";
+
                 break;
             case "H";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-            </div>";
-                echo "<a href=' target='_blank'><img src='./img/H.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/H.jpg' alt='100%' height='550px'>
+                </a>";
+
                 break;
             case "I";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:473px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
-                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'><img src='./img/I.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'><img src='./img/I.jpg' alt='100%' height='550px'>
+                </a>";
+
                 break;
             case "J";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:465px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
 
-                echo "<a href=' target='_blank'><img src='./img/J.jpg' alt='100%' height='550px'</a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501865&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/J.jpg' alt='100%' height='550px'</a>";
+
                 break;
             case "K";
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:471px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo '        <div class="box-1-1">
 
-            </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-        </div>";
-                echo "<a href=' target='_blank'><img src='./img/K.jpg' alt='100%' height='550px'></a>";
-                echo '<div class="box-2-1"></div>
-        
-                </div>
-            
-                <div class="box-2-2">
-                    &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                </div>';
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501879&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/K.jpg' alt='100%' height='550px'>
+                </a>";
+
                 break;
             default;
-                echo "        <div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'> <h3 id='h3'>
-C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
-";
-                echo "<a href=' target='_blank'><img src='./img/L.jpg' alt='100%' height='550px'></a>";
-                echo '        <div class="box-1-1">
 
-                </div>';
-                echo "        <div class='box-1-2'>
-                臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
-            </div>";
+                echo "<a href='https://memory.culture.tw/Home/Detail?Id=501880&IndexCode=Culture_Object' target='_blank'>
+                <img src='./img/L.jpg' alt='100%' height='550px'></a>";
 
-                echo '<div class="box-2-1"></div>
-        
-            </div>
-        
-            <div class="box-2-2">
-                &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-            </div>';
                 break;
         }
+        ?>
 
+        <?php
 
+        if ($month == 1) {
+            echo "<div class='nav-c' style='background-color:rgba(244, 71, 24,0.55);width:480px;'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3></div>";
+            echo '<div class="box-title-bg" style=" background-color:rgba(244, 71, 24,0.55)"></div>';
+            echo " <div class='box-title-w' style='color:rgba(232, 176, 4)'>
+            臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br></div>";
+            echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'>
+            <img src='./img/A.jpg' alt='100%' height='550px'>
+            </a>";
+            echo '<a href="https://zh.wikipedia.org/zh-tw/%E9%84%89%E5%8E%9F%E5%8F%A4%E7%B5%B1" target="_blank">
+            <div class="box-author-bg-smaller">
+            <div class="box-author-w">
+            &nbsp; &nbsp;&nbsp;郷&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp; 統
+            </div>';
+        } else {
+            echo "<div class='nav-c' style='background:rgba(125, 92, 223, 0.5);width:474px'>
+            <h3 id='h3'>
+            C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
+            </h3>
+            </div>";
 
+            echo '<div class="box-title-bg">
+            </div>';
+            echo " <div class='box-title-w'>
+            臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
+            </div>";
+            echo '<a href="https://zh.wikipedia.org/zh-tw/%E9%84%89%E5%8E%9F%E5%8F%A4%E7%B5%B1" target="_blank">
+            <div class="box-author-bg">
+            </div>
+            </a>
+            </div>
+
+            <div class="box-author-w">
+            &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+            </div>';
+        }
         ?>
         <div class="nav-back">
             <a href='?year=<?= date('Y'); ?>&month=<?= date('m'); ?>'>Back Now</a>
@@ -921,24 +806,25 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_</h3></div>
             <p>◂
 
             </p>
-            <form action="check.php">
+            <form action="check.php" method="get">
                 <div class="input-y">
                     <label for="year">Year</label>
-                    <input type="number">
+                    <input type="number" name="year" value="year">
                 </div>
                 <div class="input-m">
                     <label for="month">Month</label>
-                    <input type="number">
+                    <input type="number" name="month" value="month">
                 </div>
                 <div class="input-s">
-
-                    <input type="submit" id="submit" value="submit">
+                    <input type="submit" id="submit" value="Submit">
                 </div>
             </form>
+
         </div>
         <div class="slash">
-      /
+            /
         </div>
+
 </body>
 
 </html>
