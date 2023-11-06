@@ -109,8 +109,8 @@ padding-left: 2px; */
             border: 3px solid black;
         } */
 
-        .search,
-        .back-now {
+        .search
+ {
             padding-left: 10px;
             font-family: 'Big Shoulders Inline Text', cursive;
 
@@ -120,6 +120,19 @@ padding-left: 2px; */
             font-size: 80px;
             height: 80%;
 
+        }
+        .back-now {
+
+            font-family: 'Big Shoulders Inline Text', cursive;
+
+
+            color: rgba(125, 92, 223);
+            font-weight: bolder;
+            font-size: 80px;
+            height: 12%;
+            width: 16.3%;
+
+padding-left:3px;
         }
 
         .search:hover {
@@ -138,12 +151,7 @@ padding-left: 2px; */
             margin: right;
         }
 
-        .back-now {
-            height: 10.4%;
-            width: 16.3%;
 
-
-        }
 
         .nav>div>div>p {
             padding-top: 17px;
@@ -445,6 +453,7 @@ padding-left: 2px; */
             color: gold;
 
             text-align: center;
+            padding-top:11px;
         }
 
         .left-year,
@@ -455,6 +464,7 @@ padding-left: 2px; */
             color: rgba(240, 156, 90);
 
             text-align: center;
+            padding-bottom:50px;
         }
 
         .slash {
@@ -484,9 +494,22 @@ padding-left: 2px; */
         .w-10 {
             width: 10%;
         }
+        
+        .w-12 {
+            width: 12%;
+        }
+        .w-13 {
+            width: 13%;
+        }
 
         .w-15 {
             width: 15%;
+        }
+        .w-17 {
+            width: 17%;
+        }
+        .w-18 {
+            width: 18%;
         }
 
         .w-20 {
@@ -520,9 +543,20 @@ padding-left: 2px; */
         .w-40 {
             width: 40%;
         }
-
+        .w-42 {
+            width: 42%;
+        }
+        .w-43 {
+            width: 43%;
+        }
         .w-45 {
             width: 45%;
+        }
+        .w-47 {
+            width: 47%;
+        }
+        .w-48 {
+            width: 48%;
         }
 
         .w-50 {
@@ -603,9 +637,16 @@ padding-left: 2px; */
         .h-89 {
             height: 89%
         }
+        .h-90 {
+            height: 90%
+        }
 
         .h-100 {
             height: 100%;
+        }
+        .nav>div>div{
+
+            border: 2px solid black;
         }
     </style>
 </head>
@@ -638,7 +679,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
         ?>
 
         <div class="nav-center-l h-100 w-10 "></div>
-        <div class="nav-center-r h-100 w-45">
+        <div class="nav-center-r h-100 w-43">
             <div class="w-50 h-10"></div>
             <div class="w-100 h-90">
 
@@ -667,10 +708,10 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
             </div>
         </div>
-        <div class="nav-right h-100 w-15">
-
-            <div class="w-50 h-10"></div>
+        <div class="nav-right h-100 w-17">
+        <div class="w-50 h-10"></div>
             <div class="w-100 h-90">
+
                 <a class="back-now" href='?year=<?= date('Y'); ?>&month=<?= date('m'); ?>'>Back Now</a>
             </div>
 
