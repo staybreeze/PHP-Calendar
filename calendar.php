@@ -61,7 +61,6 @@
             display: flex;
             flex-wrap: wrap;
             margin: auto;
-            /* background-color:beige;   */
             justify-content: center;
         }
 
