@@ -87,10 +87,9 @@
         }
 
         h3 {
-            padding-top: 18px;
-            padding-left: 7px;
+
             font-family: 'Big Shoulders Inline Text', cursive;
-            font-size: 88px;
+            font-size: 58px;
             color: gold;
             /* left:-30px; */
             /* background-color: rgba(125, 92, 223,0.5); */
@@ -110,12 +109,11 @@ padding-left: 2px; */
             border: 3px solid black;
         } */
 
-        .search {
-
+        .search
+ {
             padding-left: 10px;
             font-family: 'Big Shoulders Inline Text', cursive;
-            height: 12%;
-            width: 35%;
+
 
             color: rgba(125, 92, 223);
             font-weight: bolder;
@@ -123,7 +121,6 @@ padding-left: 2px; */
             height: 80%;
 
         }
-
         .back-now {
 
             font-family: 'Big Shoulders Inline Text', cursive;
@@ -132,15 +129,15 @@ padding-left: 2px; */
             color: rgba(125, 92, 223);
             font-weight: bolder;
             font-size: 80px;
-            height: 10.5%;
-            width: 16.5%;
+            height: 12%;
+            width: 16.3%;
 
-            padding-left: 3px;
+padding-left:3px;
         }
 
         .search:hover {
-            /* background-color: #ecd453;
-            border-radius: 20px; */
+            background-color: #ecd453;
+            border-radius: 20px;
         }
 
         .back-now:hover {
@@ -163,9 +160,12 @@ padding-left: 2px; */
             font-size: 60px;
         }
 
+        .input-y,
+        .input-m {
+            display: inline-block;
 
 
-
+        }
 
         .input-y {
             padding-left: 20px;
@@ -190,26 +190,6 @@ padding-left: 2px; */
 
         }
 
-        .input-s {
-            position: relative;
-            /* padding-left: 40px;
-            padding-top: 5px;
-            width: 100%;
-            height: 100%; */
-            /* font-family: 'Big Shoulders Inline Text', cursive;
-            color: gold;
-            font-weight: bolder;
-            background-color: #ecd453; */
-            /* padding-left: 220px;
-
-            bottom: 820px; */
-
-            padding-top: 53px;
-            padding-left: 22px;
-            /* background-color: #ecd453; */
-
-        }
-
         .input-m>input,
         .input-y>input {
             background-color: rgba(240, 156, 90);
@@ -224,13 +204,12 @@ padding-left: 2px; */
         }
 
         input[type="submit"] {
-            color: rgba(26, 106, 64);
-            font-family: 'Zen Maru Gothic', serif;
-            font-weight: bolder;
-            background-color: #ecd453;
-            width: 80px;
-            height: 27px;
-
+            position: fixed;
+            margin-top: -90px;
+            margin-left: -280px;
+            width: 240px;
+            height: 80px;
+            opacity: 0;
         }
 
         .container {
@@ -242,7 +221,7 @@ padding-left: 2px; */
 
         .aside {
             height: 100%;
-            width: 50%;
+            width: 40%;
             display: flex;
             border-right: none;
             border-left: none;
@@ -260,12 +239,12 @@ padding-left: 2px; */
 
         .box-title-bg {
             position: fixed;
-            top: 250px;
-            left: 653px;
+            top: 100px;
+            left: 440px;
             /* right: 40px; */
             background-color: rgba(125, 92, 223, 0.3);
-            width: 110px;
-            height: 527px;
+            width: 90px;
+            height: 475px;
             /* opacity: 0.8; */
             font-family: 'Zen Maru Gothic', serif;
             font-size: 35px;
@@ -275,49 +254,47 @@ padding-left: 2px; */
 
         .box-title-w {
             position: fixed;
-            top: 255px;
-            left: 705px;
+            top: 105px;
+            left: 480px;
 
             width: 90px;
-            height: 800px;
+            height: 475px;
 
             font-family: 'Zen Maru Gothic', serif;
             font-size: 35px;
             color: #ecd453;
             font-weight: bolder;
-            line-height: 57px;
         }
 
 
-
+ 
 
 
         .box-author-bg {
             position: fixed;
-            bottom: 5px;
-            left: 0px;
-            /* right:300px; */
+            bottom: 0px;
+            left: 9px;
+            /* right:185px; */
             background-color: rgba(164, 171, 214, 0.4);
-            width: 688px;
-            height: 70px;
-
+            width: 451px;
+            height: 50px;
 
         }
 
         .box-author-w {
             position: fixed;
-            padding-top: 3px;
             bottom: 0px;
             left: 5px;
-            width: 672px;
-            height: 70px;
+
+            width: 435px;
+            height: 50px;
 
             font-family: 'Zen Maru Gothic', serif;
 
             font-size: 35px;
-            color: rgba(255, 55, 0);
+            color: rgba(248, 113, 58);
             font-weight: bolder;
-            text-align: center;
+
         }
 
         .box-author-bg:hover {
@@ -325,17 +302,16 @@ padding-left: 2px; */
             ;
             border-radius: 20px;
             border-style: double;
-            background-color: rgba(164, 171, 214, 0.15);
 
         }
 
-        .box-author-bg-special {
+        .box-author-bg-smaller {
             position: fixed;
             bottom: 0px;
 
             background-color: rgba(164, 171, 214, 0.4);
-            width: 560px;
-            height: 70px;
+            width: 390px;
+            height: 50px;
 
             font-family: 'Zen Maru Gothic', serif;
 
@@ -343,37 +319,22 @@ padding-left: 2px; */
 
         }
 
-        .box-author-bg-special:hover {
+        .box-author-bg-smaller:hover {
             border: 8px solid rgba(240, 156, 90);
             ;
             border-radius: 20px;
             border-style: double;
-            background-color: rgba(164, 171, 214, 0.15);
 
         }
 
+ 
 
-        .box-author-w-special {
-            position: fixed;
-            padding-top: 6px;
-            bottom: 0px;
-            left: 13px;
-            width: 672px;
-            height: 70px;
-
-            font-family: 'Zen Maru Gothic', serif;
-
-            font-size: 35px;
-            color: rgba(248, 113, 58);
-            font-weight: bolder;
-            text-align: left;
-        }
 
 
 
         .main {
             height: 100%;
-            width: 57%;
+            width: 60%;
             border: none;
 
         }
@@ -420,13 +381,13 @@ padding-left: 2px; */
 
         .tr_special {
 
-            height: 58px;
+            height: 60px;
             text-align: center;
         }
 
         .tr_normal {
 
-            height: 70px;
+            height: 73px;
             text-align: center;
         }
 
@@ -444,41 +405,19 @@ padding-left: 2px; */
 
         td {
             width: 14%;
-            height: 100%;
             font-size: larger;
         }
 
-
-        .td-weekend {
+        .td_date,
+        .td_weekend {
             font-family: 'Yusei Magic', sans-serif;
-            background: rgba(125, 92, 223, 0.5);
-            color: orange;
+
         }
 
-        .td-date {
-            font-family: 'Yusei Magic', sans-serif;
+        .td_date {
             color: gray;
-            background: rgba(211, 204, 214);
-     
         }
 
-        .td-not-month-day{
-
-            font-family: 'Yusei Magic', sans-serif;
-            color: gray;
-            background:rgba(211, 204, 214,0.8);
-  
-
-        }
-
-        .td-weekend:hover,.td-date:hover
-      {
-            background-color: #ecd453;
-            font-size: x-large;
-            border:8px solid rgba(125, 92, 223);
-            border-style: double;
-        
-        }
 
         .section1 {
             display: flex;
@@ -514,7 +453,7 @@ padding-left: 2px; */
             color: gold;
 
             text-align: center;
-            padding-top: 11px;
+            padding-top:11px;
         }
 
         .left-year,
@@ -525,7 +464,7 @@ padding-left: 2px; */
             color: rgba(240, 156, 90);
 
             text-align: center;
-            padding-bottom: 50px;
+            padding-bottom:50px;
         }
 
         .slash {
@@ -552,40 +491,29 @@ padding-left: 2px; */
             font-size: 80px;
         }
 
-        .w-7 {
-            width: 7%;
-        }
-
         .w-10 {
             width: 10%;
         }
-
+        
         .w-12 {
             width: 12%;
         }
-
         .w-13 {
             width: 13%;
-        }
-
-        .w-14 {
-            width: 14%;
         }
 
         .w-15 {
             width: 15%;
         }
-
         .w-17 {
             width: 17%;
         }
-
         .w-18 {
             width: 18%;
         }
 
         .w-20 {
-            width: 19.5%;
+            width: 20%;
         }
 
         .w-22 {
@@ -600,24 +528,12 @@ padding-left: 2px; */
             width: 25%;
         }
 
-        .w-27 {
-            width: 27%;
-        }
-
-        .w-28 {
-            width: 28%;
-        }
-
         .w-30 {
             width: 30%;
         }
 
         .w-35 {
             width: 35%;
-        }
-
-        .w-37 {
-            width: 37.5%;
         }
 
         .w-38 {
@@ -627,23 +543,18 @@ padding-left: 2px; */
         .w-40 {
             width: 40%;
         }
-
         .w-42 {
             width: 42%;
         }
-
         .w-43 {
             width: 43%;
         }
-
         .w-45 {
             width: 45%;
         }
-
         .w-47 {
             width: 47%;
         }
-
         .w-48 {
             width: 48%;
         }
@@ -654,14 +565,6 @@ padding-left: 2px; */
 
         .w-55 {
             width: 55%;
-        }
-
-        .w-72 {
-            width: 72%;
-        }
-
-        .w-73 {
-            width: 73%;
         }
 
         .w-75 {
@@ -718,30 +621,6 @@ padding-left: 2px; */
             height: 50%;
         }
 
-        .h-54 {
-            height: 54%;
-        }
-
-        .h-55 {
-            height: 55%;
-        }
-
-        .h-56 {
-            height: 56%;
-        }
-
-        .h-57 {
-            height: 57%;
-        }
-
-        .h-58 {
-            height: 58%;
-        }
-
-        .h-60 {
-            height: 60%;
-        }
-
         .h-65 {
             height: 65%;
         }
@@ -758,7 +637,6 @@ padding-left: 2px; */
         .h-89 {
             height: 89%
         }
-
         .h-90 {
             height: 90%
         }
@@ -766,32 +644,9 @@ padding-left: 2px; */
         .h-100 {
             height: 100%;
         }
+        .nav>div>div{
 
-        /* .nav>div>div,
-        form>div {
-
-            border: 1px solid black;
-        } */
-
-        /* .nav-center-l,
-        .nav-center-r,
-        .nav-left {
-
-            border: 1px solid black;
-
-        }  */
-        .input-container {
-            display: flex;
-
-        }
-
-        .input-m {
-            /* flex: 1;
-            margin-right: 10px; */
-        }
-
-        .input-s {
-            /* flex-shrink: 0;/ */
+            border: 2px solid black;
         }
     </style>
 </head>
@@ -802,20 +657,20 @@ padding-left: 2px; */
 
         <?php
         if (isset($_GET['month']) && $_GET['month'] == 1) {
-            echo "<div class='nav-left h-100 w-38' style='background-color:rgba(244, 71, 24,0.55)'>
+            echo "<div class='nav-left h-100 w-30' style='background-color:rgba(244, 71, 24,0.55)'>
 <h3 class='h3'>
 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 </h3></div>";
         } elseif (isset($_GET['month']) && $_GET['month'] > 1 && $_GET['month'] < 13) {
 
-            echo "<div class='nav-left h-100 w-38' style='background:rgba(125, 92, 223, 0.5)'>
+            echo "<div class='nav-left h-100 w-30' style='background:rgba(125, 92, 223, 0.5)'>
     <h3 id='h3'>
     C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
     </h3>
     </div>";
         } else {
             echo
-            "<div class='nav-left h-100 w-38' style='background:rgba(125, 92, 223, 0.5)'>
+            "<div class='nav-left h-100 w-30' style='background:rgba(125, 92, 223, 0.5)'>
                 <h3 id='h3'>
                 C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                 </h3>
@@ -823,13 +678,13 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
         }
         ?>
 
-        <div class="nav-center-l h-100 w-12 "></div>
-        <div class="nav-center-r h-100 w-38">
-            <div class="w-100 h-20"></div>
+        <div class="nav-center-l h-100 w-10 "></div>
+        <div class="nav-center-r h-100 w-43">
+            <div class="w-50 h-10"></div>
             <div class="w-100 h-90">
 
                 <h4 class="search">Search</h4>
-                <p>▸</p>
+                <p>◂</p>
 
                 <form action="check.php" method="get">
                     <div class="input-container">
@@ -841,19 +696,20 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                             <label for="month">Month</label>
                             <input type="number" name="month">
                         </div>
+                    </div>
+                    <div class="input-s">
 
-                        <div class="input-s">
-
-                            <input type="submit" id="submit" value="submit">
-                        </div>
+                        <input type="submit" id="submit" value="submit">
                     </div>
                 </form>
+                <div class="search1"></div>
+
 
 
             </div>
         </div>
-        <div class="nav-right h-100 w-18">
-            <div class="w-100 h-20"></div>
+        <div class="nav-right h-100 w-17">
+        <div class="w-50 h-10"></div>
             <div class="w-100 h-90">
 
                 <a class="back-now" href='?year=<?= date('Y'); ?>&month=<?= date('m'); ?>'>Back Now</a>
@@ -884,7 +740,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                             $thisMonth = date("Y");
                             $thisFirstDay = date("{$year}-{$month}-1");
                             $thisFirstDate = date('w', strtotime($thisFirstDay));
-                            $thisMonthDays = date("t", strtotime($thisFirstDay));
+                            $thisMonthDays = date("t");
                             $thisLastDay = date("{$year}-{$month}-$thisMonthDays");
                             $weeks = ceil(($thisMonthDays + $thisFirstDate) / 7);
                             $firstCell = date("Y-m-d", strtotime("-$thisFirstDate days", strtotime($thisFirstDay)));
@@ -916,7 +772,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                     </tr>
                 </table>
             </div>
-            <div class="section2 w-100 h-54">
+            <div class="section2 w-100 h-50">
                 <?php
 
                 $nextYear = $year;
@@ -969,17 +825,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                             for ($j = 0; $j < 7; $j++) {
                                 $addDays = 7 * $i + $j;
                                 $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
-                                if ($thisCellDate < strtotime($thisFirstDay) || $thisCellDate > strtotime($thisLastDay)) {
-                                    echo "<td class='td-not-month-day'>";
-                                } elseif (date('w', $thisCellDate) == 0 || date('w', $thisCellDate) == 6) {
-                                    echo "<td  class='td-weekend'>";
+                                if (date('w', $thisCellDate) == 0 || date('w', $thisCellDate) == 6) {
+                                    echo "<td style='background:rgba(125, 92, 223,0.5);color:orange' class='td_weekend'>";
                                 } else {
-                                    echo "<td  class='td-date'>";
+                                    echo "<td  style='background:rgba(211, 204, 214);color:gray' class='td_date'>";
                                 }
                                 if (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))) {
                                     echo date("j", $thisCellDate);
                                 }
-
 
                                 echo "</td>";
                             }
@@ -988,14 +841,12 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
                         echo "</table>";
                         ?>
-
-
                 </div>
                 <div class="main-center-right h-100 w-10 ">
                     <a class="a_right" href='?year=<?= $nextYear; ?>&month=<?= $next; ?>'>▸</a>
                 </div>
             </div>
-            <div class="section3 w-100 h-5 main-bottom">
+            <div class="section3 w-100 h-25 main-bottom">
 
                 <p><small>&copy;Copyright WSL Web All Rights Reserved./Images credit all for 鄉原古統.</small></p>
 
@@ -1004,10 +855,10 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
         </div>
         <div class="aside">
 
-            <div class="aside-left h-100 w-73">
+            <div class="aside-left h-100 w-75">
 
 
-                <?php
+            <?php
                 if ($month == 1) {
                     $img = "A";
                 }
@@ -1047,7 +898,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                 switch ($img) {
                     case "A":
                         echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'>
-                        <img src='./img/A.jpg' alt='100%' height='788px'>
+                        <img src='./img/A.jpg' alt='100%' height='674px'>
                         </a>";
 
                         break;
@@ -1055,30 +906,27 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501875&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/B.jpg' alt='100%' height='797px'>
+                <img src='./img/B.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
                     case "C";
 
 
-                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501870&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/C.jpg' alt='100%' height='819px'></a>";
+                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501870&IndexCode=Culture_Object' target='_blank'><img src='./img/C.jpg' alt='100%' height='674px'></a>";
 
                         break;
                     case "D";
 
 
-                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/D.jpg' alt='100%' height='796px'>
+                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'><img src='./img/D.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
                     case "E";
 
 
-                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/E.jpg' alt='100%' height='803px'>
+                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'><img src='./img/E.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
@@ -1086,7 +934,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501882&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/F.jpg' alt='100%' height='815px'>
+                <img src='./img/F.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
@@ -1094,7 +942,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501873&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/G.jpg' alt='100%' height='805px'>
+                <img src='./img/G.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
@@ -1102,15 +950,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501881&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/H.jpg' alt='100%' height='798px'>
+                <img src='./img/H.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
                     case "I";
 
 
-                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/I.jpg' alt='100%' height='800px'>
+                        echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'><img src='./img/I.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
@@ -1119,14 +966,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501865&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/J.jpg' alt='100%' height='813px'</a>";
+                <img src='./img/J.jpg' alt='100%' height='674px'</a>";
 
                         break;
                     case "K";
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501879&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/K.jpg' alt='100%' height='804px'>
+                <img src='./img/K.jpg' alt='100%' height='674px'>
                 </a>";
 
                         break;
@@ -1134,7 +981,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501880&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/L.jpg' alt='100%' height='798px'></a>";
+                <img src='./img/L.jpg' alt='100%' height='674px'></a>";
 
                         break;
                 }
@@ -1142,7 +989,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
             </div>
 
-            <div class="aside-right h-100 w-27">
+            <div class="aside-right h-100 w-25">
                 <?php
 
                 if ($month == 1) {
@@ -1150,17 +997,11 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                     echo '<div class="box-title-bg" style=" background-color:rgba(244, 71, 24,0.55)"></div>';
                     echo " <div class='box-title-w' style='color:rgba(232, 176, 4)'>
 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br></div>";;
-                    echo '</div>
-
-<div class="box-author-w-special">
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-
-</div>';
                     echo '<a href="https://zh.wikipedia.org/zh-tw/%E9%84%89%E5%8E%9F%E5%8F%A4%E7%B5%B1" target="_blank">
-<div class="box-author-bg-special">
-
-</div>
-</a>';
+<div class="box-author-bg-smaller">
+<div class="box-author-w">
+&nbsp; &nbsp;&nbsp;郷&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp; 統
+</div>';
                 } else {
 
                     echo '<div class="box-title-bg">
@@ -1168,17 +1009,15 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                     echo " <div class='box-title-w'>
 臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br>
 </div>";
-                    echo '</div>
-
-                    <div class="box-author-w">
-                    &nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
-                    
-                    </div>';
                     echo '<a href="https://zh.wikipedia.org/zh-tw/%E9%84%89%E5%8E%9F%E5%8F%A4%E7%B5%B1" target="_blank">
 <div class="box-author-bg">
-
 </div>
-</a>';
+</a>
+</div>
+
+<div class="box-author-w">
+&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;郷&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; 原&nbsp;&nbsp; &nbsp;&nbsp; 古&nbsp;&nbsp;&nbsp; &nbsp;&nbsp; 統
+</div>';
                 }
                 ?>
             </div>
