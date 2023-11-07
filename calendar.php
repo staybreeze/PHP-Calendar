@@ -353,7 +353,7 @@
             margin-left: 40px;
             width: 170px;
             height: 60px;
-            opacity: 0;
+            opacity: 1;
         }
 
         img:hover {
