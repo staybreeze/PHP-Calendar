@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>萬年曆</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@100;600;800&display=swap');
 
@@ -251,7 +251,7 @@ padding-left: 2px; */
 
         }
 
-        img:hover {
+        a>img:hover {
             border: 8px solid #ecd453;
             border-radius: 20px;
             border-style: double;
@@ -265,7 +265,7 @@ padding-left: 2px; */
             /* right: 40px; */
             background-color: rgba(125, 92, 223, 0.3);
             width: 110px;
-            height: 527px;
+            height: 500px;
             /* opacity: 0.8; */
             font-family: 'Zen Maru Gothic', serif;
             font-size: 35px;
@@ -275,7 +275,7 @@ padding-left: 2px; */
 
         .box-title-w {
             position: fixed;
-            top: 255px;
+            top: 261px;
             left: 705px;
 
             width: 90px;
@@ -285,7 +285,7 @@ padding-left: 2px; */
             font-size: 35px;
             color: #ecd453;
             font-weight: bolder;
-            line-height: 57px;
+            line-height: 53px;
         }
 
 
@@ -387,13 +387,14 @@ padding-left: 2px; */
         .main-center-center {
             padding-top: 35px;
             text-align: center;
+            background-color: rgba(164, 171, 214, 0.08);
         }
 
         .main-center-right {
             padding-top: 200px;
             padding-right: 33px;
             text-align: center;
-
+            background-color: rgba(164, 171, 214, 0.08);
 
         }
 
@@ -401,6 +402,7 @@ padding-left: 2px; */
             padding-top: 200px;
             text-align: center;
             padding-right: 33px;
+            background-color: rgba(164, 171, 214, 0.08);
         }
 
         .main-bottom {
@@ -418,15 +420,22 @@ padding-left: 2px; */
             margin: auto;
         }
 
-        .tr_special {
 
-            height: 58px;
+        .tr-4 {
+
+            height: 88px;
             text-align: center;
         }
 
-        .tr_normal {
+        .tr-5 {
 
             height: 70px;
+            text-align: center;
+        }
+
+        .tr-6 {
+
+            height: 58px;
             text-align: center;
         }
 
@@ -446,6 +455,7 @@ padding-left: 2px; */
             width: 14%;
             height: 100%;
             font-size: larger;
+            text-align: center;
         }
 
 
@@ -457,27 +467,98 @@ padding-left: 2px; */
 
         .td-date {
             font-family: 'Yusei Magic', sans-serif;
+
             color: gray;
             background: rgba(211, 204, 214);
-     
+
         }
 
-        .td-not-month-day{
+        .td-not-month-day {
 
-            font-family: 'Yusei Magic', sans-serif;
+
             color: gray;
-            background:rgba(211, 204, 214,0.8);
-  
+            background: rgba(211, 204, 214, 0.8);
+
 
         }
 
-        .td-weekend:hover,.td-date:hover
-      {
+        .td-weekend:hover {
             background-color: #ecd453;
-            font-size: x-large;
-            border:8px solid rgba(125, 92, 223);
+            /* font-size: larger; */
+            border: 5px solid rgba(125, 92, 223);
             border-style: double;
-        
+            color: rgba(125, 92, 223);
+
+        }
+
+        .td-date:hover {
+            background-color: #ecd453;
+            /* font-size: larger; */
+            border: 5px solid rgba(125, 92, 223);
+            border-style: double;
+
+        }
+
+        td>.now {
+            font-size: 18px;
+            color: crimson;
+
+            margin-bottom: 0;
+            margin: auto;
+            font-family: 'Zen Maru Gothic', serif;
+            font-weight:800;
+        }
+
+        .birthday-weekend {
+            font-size: 15px;
+            color: rgba(211, 204, 214);
+
+
+            margin-bottom: 0;
+            margin: auto;
+            font-family: 'Zen Maru Gothic', serif;
+            font-weight: bold;
+        }
+
+        .birthday-weekend:hover {
+            color: rgba(255, 55, 0);
+        }
+
+        .birthday-weekdays {
+            font-size: 15px;
+            color: rgba(125, 92, 223);
+
+            margin-bottom: 0;
+            margin: auto;
+            font-family: 'Zen Maru Gothic', serif;
+            font-weight: bold;
+        }
+
+        td>.festival-weekdays {
+            font-size: 15px;
+            color: rgba(125, 92, 223);
+
+            margin-bottom: 0;
+            margin: auto;
+            font-family: 'Zen Maru Gothic', serif;
+            font-weight: bold;
+        }
+
+        td>.festival-weekend {
+            font-size: 15px;
+            color: rgba(211, 204, 214);
+
+            margin-bottom: 0;
+            margin: auto;
+            font-family: 'Zen Maru Gothic', serif;
+            font-weight: bold;
+        }
+
+        td>.festival-weekend:hover {
+
+            color: rgba(125, 92, 223);
+
+
         }
 
         .section1 {
@@ -959,16 +1040,20 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                         </tr>
                         <?php
                         for ($i = 0; $i < $weeks; $i++) {
-                            if ($weeks <= 5) {
+                            if ($weeks < 5) {
 
-                                echo "<tr class='tr_normal'>";
+                                echo "<tr class='tr-4'>";
+                            } elseif ($weeks = 5) {
+
+                                echo "<tr class='tr-5'>";
                             } else {
-                                echo "<tr class='tr_special'>";
+                                echo "<tr class='tr-6'>";
                             }
 
                             for ($j = 0; $j < 7; $j++) {
                                 $addDays = 7 * $i + $j;
                                 $thisCellDate = strtotime("+$addDays days", strtotime($firstCell));
+
                                 if ($thisCellDate < strtotime($thisFirstDay) || $thisCellDate > strtotime($thisLastDay)) {
                                     echo "<td class='td-not-month-day'>";
                                 } elseif (date('w', $thisCellDate) == 0 || date('w', $thisCellDate) == 6) {
@@ -979,8 +1064,530 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                                 if (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))) {
                                     echo date("j", $thisCellDate);
                                 }
+                                if (date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))) {
+                                    echo "<p class='now'>Now</p>";
+                                }
+                                if (date("j", $thisCellDate) == 8 && (date("m", $thisCellDate) == 8 && (date("Y", $thisCellDate) == 1887))) {
+                                    echo "<p class='now'>鄉原古統</p>";
+                                }
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 28 && (date("m", strtotime($thisFirstDay)) == 2)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 28 && (date("m", strtotime($thisFirstDay)) == 2)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>和平紀念日</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 28 && (date("m", strtotime($thisFirstDay)) == 2))
+                                ) {
+                                    echo "<p class='festival-weekdays'>和平紀念日</p>";
+                                }
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 10
+                                        && (date("m", strtotime($thisFirstDay)) == 10)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 10
+                                    && (date("m", strtotime($thisFirstDay)) == 10)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>國慶日</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 10 && (date("m", strtotime($thisFirstDay)) == 10))
+                                ) {
+                                    echo "<p class='festival-weekdays'>國慶日</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 4
+                                        && (date("m", strtotime($thisFirstDay)) == 4)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 4
+                                    && (date("m", strtotime($thisFirstDay)) == 4)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>兒童節</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 4 && (date("m", strtotime($thisFirstDay)) == 4))
+                                ) {
+                                    echo "<p class='festival-weekdays'>兒童節</p>";
+                                }
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 28
+                                        && (date("m", strtotime($thisFirstDay)) == 9)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 28
+                                    && (date("m", strtotime($thisFirstDay)) == 9)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>教師節</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 28 && (date("m", strtotime($thisFirstDay)) == 9))
+                                ) {
+                                    echo "<p class='festival-weekdays'>教師節</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 5
+                                        && (date("m", strtotime($thisFirstDay)) == 4)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 5
+                                    && (date("m", strtotime($thisFirstDay)) == 4)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>清明節</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 5
+                                        && (date("m", strtotime($thisFirstDay)) == 4))
+                                ) {
+                                    echo "<p class='festival-weekdays'>清明節</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 8
+                                        && (date("m", strtotime($thisFirstDay)) == 8)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 8
+                                    && (date("m", strtotime($thisFirstDay)) == 8)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>父親節</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 8
+                                        && (date("m", strtotime($thisFirstDay)) == 8))
+                                ) {
+                                    echo "<p class='festival-weekdays'>父親節</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 25
+                                        && (date("m", strtotime($thisFirstDay)) == 12)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 25
+                                    && (date("m", strtotime($thisFirstDay)) == 12)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>聖誕節</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 25
+                                        && (date("m", strtotime($thisFirstDay)) == 12))
+                                ) {
+                                    echo "<p class='festival-weekdays'>聖誕節</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 11
+                                        && (date("m", strtotime($thisFirstDay)) == 11)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 11
+                                    && (date("m", strtotime($thisFirstDay)) == 11)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='festival-weekend'>光棍節</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 11
+                                        && (date("m", strtotime($thisFirstDay)) == 11))
+                                ) {
+                                    echo "<p class='festival-weekdays'>光棍節</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                && date("j", $thisCellDate) == 25
+                                && (date("m", strtotime($thisFirstDay)) == 11)
+                                && (date('w', $thisCellDate) == 6))
+                            ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                            && date("j", $thisCellDate) == 25
+                            && (date("m", strtotime($thisFirstDay)) == 11)
+                            && (date('w', $thisCellDate) == 0)
+                        ) {
+                            echo "<p class='festival-weekend'>感恩節</p>";
+                        } elseif (
+                            date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                            && (date("j", $thisCellDate) == 25
+                                && (date("m", strtotime($thisFirstDay)) == 11))
+                        ) {
+                            echo "<p class='festival-weekdays'>感恩節</p>";
+                        }
+                                if (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)) &&
+                                    date("m", strtotime($thisFirstDay)) == 5 &&
+                                    date("w", $thisCellDate) == 0 &&
+                                    date("j", $thisCellDate) > 7 &&
+                                    date("j", $thisCellDate) <= 14
+                                ) {
+                                    echo "<p class='festival-weekend'>母親節</p>";
+                                }
+
+                                if (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)) &&
+                                    date("m", strtotime($thisFirstDay)) == 5 &&
+                                    date("w", $thisCellDate) == 4 &&
+                                    date("j", $thisCellDate) > 7 &&
+                                    date("j", $thisCellDate) <= 14
+                                ) {
+                                    echo "<p class='festival-weekdays'>打耳祭</p>";
+                                }
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 8
+                                        && (date("m", strtotime($thisFirstDay)) == 8)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 8
+                                    && (date("m", strtotime($thisFirstDay)) == 8)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='birthday-weekend'>郷原古統</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 8
+                                        && (date("m", strtotime($thisFirstDay)) == 8))
+                                ) {
+                                    echo "<p class='birthday-weekdays'>郷原古統</p>";
+                                }
 
 
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 8
+                                        && (date("m", strtotime($thisFirstDay)) == 8)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 8
+                                    && (date("m", strtotime($thisFirstDay)) == 8)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='birthday-weekend'>石川欽一郎</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 8
+                                        && (date("m", strtotime($thisFirstDay)) == 8))
+                                ) {
+                                    echo "<p class='birthday-weekdays'>石川欽一郎</p>";
+                                }
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                        && date("j", $thisCellDate) == 27
+                                        && (date("m", strtotime($thisFirstDay)) == 2)
+                                        && (date('w', $thisCellDate) == 6))
+                                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                    && date("j", $thisCellDate) == 27
+                                    && (date("m", strtotime($thisFirstDay)) == 2)
+                                    && (date('w', $thisCellDate) == 0)
+                                ) {
+                                    echo "<p class='birthday-weekend'>鹽月桃甫</p>";
+                                } elseif (
+                                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                                    && (date("j", $thisCellDate) == 27
+                                        && (date("m", strtotime($thisFirstDay)) == 2))
+                                ) {
+                                    echo "<p class='birthday-weekdays'>鹽月桃甫</p>";
+                                }
+
+
+                                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                                && date("j", $thisCellDate) == 7
+                                && (date("m", strtotime($thisFirstDay)) == 3)
+                                && (date('w', $thisCellDate) == 6))
+                            ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                            && date("j", $thisCellDate) == 7
+                            && (date("m", strtotime($thisFirstDay)) == 3)
+                            && (date('w', $thisCellDate) == 0)
+                        ) {
+                            echo "<p class='birthday-weekend'>黃土水</p>";
+                        } elseif (
+                            date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                            && (date("j", $thisCellDate) == 7
+                                && (date("m", strtotime($thisFirstDay)) == 3))
+                        ) {
+                            echo "<p class='birthday-weekdays'>黃土水</p>";
+                        }
+
+                        if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                        && date("j", $thisCellDate) == 2
+                        && (date("m", strtotime($thisFirstDay)) == 2)
+                        && (date('w', $thisCellDate) == 6))
+                    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                    && date("j", $thisCellDate) == 2
+                    && (date("m", strtotime($thisFirstDay)) == 2)
+                    && (date('w', $thisCellDate) == 0)
+                ) {
+                    echo "<p class='birthday-weekend'>陳澄波</p>";
+                } elseif (
+                    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+                    && (date("j", $thisCellDate) == 2
+                        && (date("m", strtotime($thisFirstDay)) == 2))
+                ) {
+                    echo "<p class='birthday-weekdays'>陳澄波</p>";
+                }
+
+                if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+                && date("j", $thisCellDate) == 2
+                && (date("m", strtotime($thisFirstDay)) == 11)
+                && (date('w', $thisCellDate) == 6))
+            ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+            && date("j", $thisCellDate) == 2
+            && (date("m", strtotime($thisFirstDay)) == 11)
+            && (date('w', $thisCellDate) == 0)
+        ) {
+            echo "<p class='birthday-weekend'>陳進</p>";
+        } elseif (
+            date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+            && (date("j", $thisCellDate) == 2
+                && (date("m", strtotime($thisFirstDay)) == 11))
+        ) {
+            echo "<p class='birthday-weekdays'>陳進</p>";
+        }
+
+        
+        if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+        && date("j", $thisCellDate) == 10
+        && (date("m", strtotime($thisFirstDay)) == 4)
+        && (date('w', $thisCellDate) == 6))
+    ||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+    && date("j", $thisCellDate) == 10
+    && (date("m", strtotime($thisFirstDay)) == 4)
+    && (date('w', $thisCellDate) == 0)
+) {
+    echo "<p class='birthday-weekend'>郭雪湖</p>";
+} elseif (
+    date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+    && (date("j", $thisCellDate) == 10
+        && (date("m", strtotime($thisFirstDay)) ==4))
+) {
+    echo "<p class='birthday-weekdays'>郭雪湖</p>";
+}
+
+        
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 1
+&& (date("m", strtotime($thisFirstDay)) == 4)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 1
+&& (date("m", strtotime($thisFirstDay)) == 4)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>林玉山</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 1
+&& (date("m", strtotime($thisFirstDay)) ==4))
+) {
+echo "<p class='birthday-weekdays'>林玉山</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 4
+&& (date("m", strtotime($thisFirstDay)) == 1)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 4
+&& (date("m", strtotime($thisFirstDay)) == 1)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>廖繼春</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 4
+&& (date("m", strtotime($thisFirstDay)) ==1))
+) {
+echo "<p class='birthday-weekdays'>廖繼春</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 13
+&& (date("m", strtotime($thisFirstDay)) == 3)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 13
+&& (date("m", strtotime($thisFirstDay)) == 3)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>李梅樹</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 13
+&& (date("m", strtotime($thisFirstDay)) ==3))
+) {
+echo "<p class='birthday-weekdays'>李梅樹</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 5
+&& (date("m", strtotime($thisFirstDay)) == 10)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 5
+&& (date("m", strtotime($thisFirstDay)) == 10)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>楊三郎</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 5
+&& (date("m", strtotime($thisFirstDay)) ==10))
+) {
+echo "<p class='birthday-weekdays'>楊三郎</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 13
+&& (date("m", strtotime($thisFirstDay)) == 7)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 13
+&& (date("m", strtotime($thisFirstDay)) == 7)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>李石樵</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 13
+&& (date("m", strtotime($thisFirstDay)) ==7))
+) {
+echo "<p class='birthday-weekdays'>李石樵</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 16
+&& (date("m", strtotime($thisFirstDay)) == 1)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 16
+&& (date("m", strtotime($thisFirstDay)) == 1)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>陳植棋</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 16
+&& (date("m", strtotime($thisFirstDay)) ==1))
+) {
+echo "<p class='birthday-weekdays'>陳植棋</p>";
+}
+
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 12
+&& (date("m", strtotime($thisFirstDay)) == 8)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 12
+&& (date("m", strtotime($thisFirstDay)) == 8)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>倪蔣懷</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 12
+&& (date("m", strtotime($thisFirstDay)) ==8))
+) {
+echo "<p class='birthday-weekdays'>倪蔣懷</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 2
+&& (date("m", strtotime($thisFirstDay)) == 2)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 2
+&& (date("m", strtotime($thisFirstDay)) == 2)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>林之助</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 2
+&& (date("m", strtotime($thisFirstDay)) ==2))
+) {
+echo "<p class='birthday-weekdays'>林之助</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 7
+&& (date("m", strtotime($thisFirstDay)) == 5)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 7
+&& (date("m", strtotime($thisFirstDay)) == 5)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>洪瑞麟</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 7
+&& (date("m", strtotime($thisFirstDay)) ==5))
+) {
+echo "<p class='birthday-weekdays'>洪瑞麟</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 21
+&& (date("m", strtotime($thisFirstDay)) == 7)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 21
+&& (date("m", strtotime($thisFirstDay)) == 7)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>郭柏川</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 21
+&& (date("m", strtotime($thisFirstDay)) ==7))
+) {
+echo "<p class='birthday-weekdays'>郭柏川</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 1
+&& (date("m", strtotime($thisFirstDay)) == 3)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 1
+&& (date("m", strtotime($thisFirstDay)) == 3)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>立石鐵臣</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 1
+&& (date("m", strtotime($thisFirstDay)) ==3))
+) {
+echo "<p class='birthday-weekdays'>立石鐵臣</p>";
+}
+
+if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 12
+&& (date("m", strtotime($thisFirstDay)) == 11)
+&& (date('w', $thisCellDate) == 6))
+||  (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
+&& date("j", $thisCellDate) == 12
+&& (date("m", strtotime($thisFirstDay)) == 11)
+&& (date('w', $thisCellDate) == 0)
+) {
+echo "<p class='birthday-weekend'>國父誕辰</p>";
+} elseif (
+date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))
+&& (date("j", $thisCellDate) == 12
+&& (date("m", strtotime($thisFirstDay)) ==11))
+) {
+echo "<p class='birthday-weekdays'>國父誕辰</p>";
+}
                                 echo "</td>";
                             }
                             echo "</tr>";
@@ -1047,7 +1654,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                 switch ($img) {
                     case "A":
                         echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'>
-                        <img src='./img/A.jpg' alt='100%' height='788px'>
+                        <img src='./img/A.jpg' alt='100%'  height='780px' width='687px'>
                         </a>";
 
                         break;
@@ -1055,7 +1662,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501875&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/B.jpg' alt='100%' height='797px'>
+                <img src='./img/B.jpg' alt='100%'  height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1063,14 +1670,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501870&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/C.jpg' alt='100%' height='819px'></a>";
+                        <img src='./img/C.jpg' alt='100%'  height='780px' width='687px'></a>";
 
                         break;
                     case "D";
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/D.jpg' alt='100%' height='796px'>
+                        <img src='./img/D.jpg' alt='100%' height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1078,7 +1685,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/E.jpg' alt='100%' height='803px'>
+                        <img src='./img/E.jpg' alt='100%' height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1086,7 +1693,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501882&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/F.jpg' alt='100%' height='815px'>
+                <img src='./img/F.jpg' alt='100%'  height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1094,7 +1701,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501873&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/G.jpg' alt='100%' height='805px'>
+                <img src='./img/G.jpg' alt='100%'  height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1102,7 +1709,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501881&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/H.jpg' alt='100%' height='798px'>
+                <img src='./img/H.jpg' alt='100%'  height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1110,7 +1717,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/I.jpg' alt='100%' height='800px'>
+                        <img src='./img/I.jpg' alt='100%' height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1119,14 +1726,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501865&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/J.jpg' alt='100%' height='813px'</a>";
+                <img src='./img/J.jpg' alt='100%'  height='780px' width='687px'></a>";
 
                         break;
                     case "K";
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501879&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/K.jpg' alt='100%' height='804px'>
+                <img src='./img/K.jpg' alt='100%' height='780px' width='687px'>
                 </a>";
 
                         break;
@@ -1134,7 +1741,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501880&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/L.jpg' alt='100%' height='798px'></a>";
+                <img src='./img/L.jpg' alt='100%' height='780px' width='687px'></a>";
 
                         break;
                 }
