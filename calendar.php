@@ -105,6 +105,7 @@ padding-left: 2px; */
         .nav>div>div {
             display: flex;
             flex-wrap: wrap;
+
         }
 
         /* .nav>div>div {
@@ -393,17 +394,18 @@ padding-left: 2px; */
 
         .main-center-right {
             padding-top: 200px;
-            padding-right: 33px;
-            text-align: center;
+            padding-left: 31px;
+
             background-color: rgba(164, 171, 214, 0.08);
 
         }
 
         .main-center-left {
             padding-top: 200px;
-            text-align: center;
-            padding-right: 33px;
+            padding-left: 28px;
+
             background-color: rgba(164, 171, 214, 0.08);
+
         }
 
         .main-bottom {
@@ -876,7 +878,27 @@ padding-left: 2px; */
             /* flex-shrink: 0;/ */
         }
 
+        /* .content {
 
+            height: 100%;
+            padding-bottom: 50px;
+            width: 35.5%;
+        } */
+
+        .content {
+				height: 100%;
+                width:35%;
+			}
+			#rainBox {
+				height: 100%;
+			}
+
+        .rain {
+            position: absolute;
+            width: 3px;
+            height: 30px;
+            background: linear-gradient(rgba(255, 255, 255, .3), rgba(255, 255, 255, .66));
+        }
     </style>
 </head>
 
@@ -949,7 +971,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
     </div>
     <div class="container">
 
-        <div class="main">
+        <div class="main" >
             <?php
 
             if (isset($_GET['month']) && (isset($_GET['year']))) {
@@ -1631,9 +1653,10 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
             </div>
 
         </div>
+        
         <div class="aside">
 
-            <div class="aside-left h-100 w-73">
+            <div class="aside-left h-100 w-73" >
 
 
                 <?php
@@ -1676,7 +1699,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                 switch ($img) {
                     case "A":
                         echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'>
-                        <img src='./img/A.jpg' alt='100%'  height='780px' width='687px'>
+                        <img  src='./img/A.jpg' alt='100%'  height='780px' width='687px'>
                         </a>";
 
                         break;
@@ -1810,9 +1833,50 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 </a>';
                 }
                 ?>
-            </div>
+                
+          
         </div>
+
     </div>
+    <?php
+if($month==1||$month==2||$month==11||$month==12){
+    echo '
+<div class="content">
+<div id="rainBox"></div>
+</div>';}
+
+    ?>
+    <script>
+        const box = document.getElementById('rainBox');
+        let boxHeight = box.clientHeight;
+        let boxWidth = box.clientWidth;
+        window.onresize = function() {
+            boxHeight = box.clientHeight;
+            boxWidth = box.clientWidth;
+        }
+
+        function rainDot() {
+            let rain = document.createElement('div');
+            rain.classList.add('rain');
+            rain.style.top = `${boxHeight / 7}px`;  
+            rain.style.left = `${Math.random() * boxWidth}px`;
+            rain.style.opacity = Math.random();
+            box.appendChild(rain);
+
+            let gap = 0.05;
+            const loop = setInterval(() => {
+                if (parseInt(rain.style.top) > boxHeight) {
+                    clearInterval(loop);
+                    box.removeChild(rain)
+                }
+                gap++
+                rain.style.top = `${parseInt(rain.style.top)+gap}px`;
+            }, 10)
+        }
+        setInterval(() => {
+            rainDot();
+        }, 7)
+    </script>
 </body>
 
 </html>
