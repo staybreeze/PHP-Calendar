@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>萬年曆</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style>
+   <link rel="stylesheet" href="./test/style.css">
+   <style>
         @import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Inline+Text:wght@100;600;800&display=swap');
 
         @import url('https://fonts.googleapis.com/css2?family=Limelight&family=Yusei+Magic&family=Zen+Maru+Gothic:wght@300;400;700;900&display=swap');
@@ -622,6 +623,7 @@ padding-left: 2px; */
             color: rgba(125, 92, 223);
             font-size: 50px;
             position: fixed;
+            
         }
 
         .a_right {
@@ -1192,7 +1194,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                                     && (date("j", $thisCellDate) == 8
                                         && (date("m", strtotime($thisFirstDay)) == 8))
                                 ) {
-                                    echo "<p class='festival-weekdays'><i class='fa-solid fa-user-secret'></i>&nbsp;父親節</p>";
+                                    echo "<p class='festival-weekdays'><i class='fa-solid fa-sun'></i>&nbsp;父親節</p>";
                                 }
 
                                 if (((date("m", $thisCellDate) == date("m", strtotime($thisFirstDay)))
@@ -1699,7 +1701,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                 switch ($img) {
                     case "A":
                         echo "<a href='https://www.tfam.museum/Collection/CollectionDetail.aspx?CID=3426&ddlLang=zh-tw' target='_blank'>
-                        <img  src='./img/A.jpg' alt='100%'  height='780px' width='687px'>
+                        <img  src='./img/A.jpg' alt='100%'  height='770px' width='687.5px'>
                         </a>";
 
                         break;
@@ -1707,7 +1709,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501875&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/B.jpg' alt='100%'  height='780px' width='687px'>
+                <img src='./img/B.jpg' alt='100%'  height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1715,14 +1717,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501870&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/C.jpg' alt='100%'  height='780px' width='687px'></a>";
+                        <img src='./img/C.jpg' alt='100%'  height='770px' width='687.5px'></a>";
 
                         break;
                     case "D";
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501867&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/D.jpg' alt='100%' height='780px' width='687px'>
+                        <img src='./img/D.jpg' alt='100%' height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1730,7 +1732,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501877&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/E.jpg' alt='100%' height='780px' width='687px'>
+                        <img src='./img/E.jpg' alt='100%' height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1738,7 +1740,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501882&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/F.jpg' alt='100%'  height='780px' width='687px'>
+                <img src='./img/F.jpg' alt='100%'  height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1746,7 +1748,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501873&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/G.jpg' alt='100%'  height='780px' width='687px'>
+                <img src='./img/G.jpg' alt='100%'  height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1754,7 +1756,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501881&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/H.jpg' alt='100%'  height='780px' width='687px'>
+                <img src='./img/H.jpg' alt='100%'  height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1762,7 +1764,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501883&IndexCode=Culture_Object' target='_blank'>
-                        <img src='./img/I.jpg' alt='100%' height='780px' width='687px'>
+                        <img src='./img/I.jpg' alt='100%' height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1771,14 +1773,14 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501865&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/J.jpg' alt='100%'  height='780px' width='687px'></a>";
+                <img src='./img/J.jpg' alt='100%'  height='770px' width='687.5px'></a>";
 
                         break;
                     case "K";
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501879&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/K.jpg' alt='100%' height='780px' width='687px'>
+                <img src='./img/K.jpg' alt='100%' height='770px' width='687.5px'>
                 </a>";
 
                         break;
@@ -1786,7 +1788,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
 
                         echo "<a href='https://memory.culture.tw/Home/Detail?Id=501880&IndexCode=Culture_Object' target='_blank'>
-                <img src='./img/L.jpg' alt='100%' height='780px' width='687px'></a>";
+                <img src='./img/L.jpg' alt='100%' height='770px' width='687.5px'></a>";
 
                         break;
                 }
@@ -1794,6 +1796,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
             </div>
 
+            
             <div class="aside-right h-100 w-27">
                 <?php
 
@@ -1801,7 +1804,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
                     echo '<div class="box-title-bg" style=" background-color:rgba(244, 71, 24,0.55)"></div>';
                     echo " <div class='box-title-w' style='color:rgba(232, 176, 4)'>
-臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br></div>";;
+臺<br>北<br>名<br>所<br>繪<br>畫<br>十<br>二<br>景<br></div>";
                     echo '</div>
 
 <div class="box-author-w-special">
@@ -1839,13 +1842,17 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
 
     </div>
     <?php
-if($month==1||$month==2||$month==11||$month==12){
+if($month==1||$month==2){
     echo '
 <div class="content">
 <div id="rainBox"></div>
 </div>';}
 
+
+
+
     ?>
+     
     <script>
         const box = document.getElementById('rainBox');
         let boxHeight = box.clientHeight;
