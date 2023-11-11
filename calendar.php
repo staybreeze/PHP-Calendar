@@ -504,7 +504,7 @@ padding-left: 2px; */
         }
 
         td>.now {
-            font-size: 18px;
+            /* font-size: 18px; */
             color: crimson;
 
             margin-bottom: 0;
@@ -1091,9 +1091,15 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                                 if (date("m", $thisCellDate) == date("m", strtotime($thisFirstDay))) {
                                     echo date("j", $thisCellDate);
                                 }
-                                if (date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))) {
-                                    echo "<p class='now'>Now</p>";
+                                if (date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))&&(date('w', $thisCellDate) == 0)||date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))&&(date('w', $thisCellDate) == 6)) {
+                                    echo "<p style='color:gold;background-color:rgba(154, 54, 128)'>Now</p>";
+                                }elseif(date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))){
+                                    echo "<p class='now' style='background-color:rgba(251, 183, 10)'>Now</p>";
                                 }
+
+                                    
+
+                                
                                 if (date("j", $thisCellDate) == 8 && (date("m", $thisCellDate) == 8 && (date("Y", $thisCellDate) == 1887))) {
                                     echo "<p class='now'>鄉原古統</p>";
                                 }
