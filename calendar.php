@@ -1094,7 +1094,7 @@ C&nbsp;A&nbsp;L&nbsp;E&nbsp;N&nbsp;D&nbsp;A&nbsp;R&nbsp; _&nbsp;_
                                 if (date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))&&(date('w', $thisCellDate) == 0)||date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))&&(date('w', $thisCellDate) == 6)) {
                                     echo "<p style='color:gold;background-color:rgba(154, 54, 128)'>Now</p>";
                                 }elseif(date("j", $thisCellDate) == date("j") && (date("m", $thisCellDate) == date("m")) && (date("Y", $thisCellDate) == date("Y"))){
-                                    echo "<p class='now' style='background-color:rgba(251, 183, 10)'>Now</p>";
+                                    echo "<p class='now' style='background-color:rgba(251, 183, 10);border-radius:15px;padding-bottom:2px'>Now</p>";
                                 }
 
                                     
